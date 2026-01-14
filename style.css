@@ -1,75 +1,95 @@
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:linear-gradient(135deg,#6a11cb,#2575fc);
-color:#333;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  color: #222;
 }
 
-.header{
-text-align:center;
-padding:30px;
-background:#fff;
-border-radius:0 0 30px 30px;
+/* HERO */
+.hero {
+  padding: 50px 20px;
+  text-align: center;
+  background: linear-gradient(135deg,#4f46e5,#22c55e);
+  color: #fff;
+}
+.hero h1 {font-size: 32px;}
+.hero p {max-width: 700px; margin: 15px auto;}
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #25d366;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.services{
-padding:20px;
-display:grid;
-grid-template-columns:1fr;
-gap:15px;
+/* SERVICES */
+.services {
+  padding: 40px 20px;
+}
+.services h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  gap: 15px;
+}
+.service-card {
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: #222;
+}
+.service-card i {
+  font-size: 30px;
+  color: #4f46e5;
+}
+.service-card:hover {
+  transform: translateY(-5px);
 }
 
-.card{
-background:#fff;
-padding:20px;
-border-radius:20px;
-font-size:18px;
-font-weight:bold;
+/* FOOTER */
+footer {
+  background: #111827;
+  padding: 20px;
+  text-align: center;
+}
+.social a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 20px;
+}
+.bottom-nav a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+.bottom-nav .active {
+  text-decoration: underline;
 }
 
-.card a{
-display:inline-block;
-margin-top:10px;
-background:#25D366;
-color:#fff;
-padding:10px 20px;
-border-radius:30px;
-text-decoration:none;
+/* PAGE */
+.page {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
 }
 
-.about{
-background:#fff;
-margin:20px;
-padding:25px;
-border-radius:20px;
-line-height:1.6;
-}
-
-footer{
-text-align:center;
-padding:20px;
-background:#fff;
-border-radius:30px 30px 0 0;
-}
-
-footer a{
-margin:0 10px;
-text-decoration:none;
-font-weight:bold;
-color:#2575fc;
-}
-
-.social a{
-display:inline-block;
-margin:5px;
-}.icon{
-  font-size:32px;
-  color:#2575fc;
-  display:block;
-  margin-bottom:10px;
-}.service-icon{
-  width:32px;
-  height:32px;
-  margin-bottom:10px;
-  fill:#2575fc;
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #25d366;
+  color: #fff;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 24px;
 }
