@@ -92,7 +92,9 @@ footer {
   padding: 15px;
   border-radius: 50%;
   font-size: 24px;
-}.blog-services {
+}
+/* BLOG SERVICES */
+.blog-services {
   padding: 40px 15px;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: #fff;
@@ -104,7 +106,15 @@ footer {
   margin-bottom: 30px;
   font-size: 32px;
 }
+.blog-card:hover i {
+  color: #fff;
+}
 
+/* BLOG PAGE */
+.blog-page {
+  background: #f6f8fc;
+  padding: 60px 16px;
+}
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -144,4 +154,74 @@ footer {
 
 .blog-card:hover i {
   color: #fff;
+}.blog-page {
+  background: #f6f8fc;
+  padding: 60px 16px;
+}
+
+.blog-container {
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.blog-container h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.blog-container .tagline {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.blog-container h2 {
+  margin-top: 30px;
+  font-size: 22px;
+}
+
+.blog-container p,
+.blog-container li {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+}.blog-container ul {
+  padding-left: 20px;
+  margin-top: 15px;
+}/* Header Styling */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo Styling */
+.site-header .logo img {
+  height: 60px; /* لوگو کا size */
+  width: auto;
+  display: block;
+  border-radius: 8px; /* optional */
+}
+
+/* Navigation Styling */
+.site-header .main-nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.site-header .main-nav a:hover {
+  color: #0d6efd; /* hover color */
 }
