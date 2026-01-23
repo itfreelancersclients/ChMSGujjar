@@ -224,4 +224,230 @@ footer {
 
 .site-header .main-nav a:hover {
   color: #0d6efd; /* hover color */
+}/* HERO BANNER */
+.hero-banner {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+/* Poster Image */
+.front-poster {
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 40px;
+}
+
+.poster-img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+}
+
+/* Banner Text */
+.hero-content {
+  text-align: center;
+  color: #ffffff;
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #e0e0e0;
+}
+
+/* Button */
+.btn-cta {
+  display: inline-block;
+  padding: 14px 36px;
+  background: #0d6efd;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+  background: #ffffff;
+  color: #0d6efd;
+  transform: translateY(-3px);
+}/* FIX: Hero Banner & Next Section Spacing */
+
+.hero-banner {
+  padding-bottom: 80px;   /* Hero ke niche space */
+}
+
+.hero-banner + section,
+.hero-banner + .services,
+.hero-banner + .container {
+  margin-top: 60px;       /* Hero ke baad wali section se gap */
+}
+
+/* Mobile view ke liye */
+@media (max-width: 768px) {
+  .hero-banner {
+    padding-bottom: 60px;
+  }
+
+  .hero-banner + section,
+  .hero-banner + .services,
+  .hero-banner + .container {
+    margin-top: 40px;
+  }
+}/* ===== FOOTER & SOCIAL ICONS ===== */
+
+footer {
+  padding: 25px 0 30px;   /* upar niche balanced spacing */
+  background: #0f2027;
+}
+
+/* Social icons wrapper */
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 14px;              /* icons ke darmiyan gap */
+  margin-top: 8px;       /* pages aur icons ka gap kam */
+}
+
+/* Individual icon */
+.social a {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* Hover animation */
+.social a:hover {
+  transform: translateY(-4px) scale(1.05);
+  background: linear-gradient(135deg, #6610f2, #0d6efd);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .social a {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }/* Footer overall */
+footer {
+  background: #f8f9fa; /* light background for contrast */
+  padding: 25px 15px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+/* Bottom navigation links */
+.bottom-nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px; /* vertical gap from social icons */
+  gap: 20px;           /* horizontal gap between links */
+}
+
+.bottom-nav a {
+  display: inline-block;
+  padding: 8px 15px;
+  background: #ffffff;  /* clean card-like background for links */
+  border-radius: 8px;
+  color: #333;          /* text color */
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.bottom-nav a:hover {
+  background: #0d6efd;  /* hover background */
+  color: #fff;           /* hover text color */
+  transform: translateY(-2px);
+}
+
+/* Social icons */
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 18px; /* horizontal spacing */
+  margin-top: 20px; /* vertical gap from nav links */
+}
+
+.social a {
+  font-size: 22px;
+  color: #333;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social a:hover {
+  color: #0d6efd;
+  transform: translateY(-3px);
+}/* Footer Styling */
+footer {
+  background: #0f2027; 
+  color: #fff;
+  padding: 20px 15px;
+  text-align: center;
+}
+
+/* Footer navigation links */
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;          /* horizontal spacing */
+  margin-bottom: 20px; /* vertical space below nav */
+}
+
+.footer-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: inline-block; /* ensures text is visible */
+}
+
+.footer-nav a:hover,
+.footer-nav a.active {
+  background: #0d6efd;
+  color: #fff;
+}
+
+/* Footer Social Icons */
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 25px;  /* horizontal spacing between icons */
+}
+
+.footer-social a {
+  color: #ffffff;
+  font-size: 22px;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #0d6efd;
+  transform: translateY(-4px);
 }

@@ -1,41 +1,152 @@
+<!-- ================= Responsive Banner & Blog Content ================= -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Graphic Design | IT Freelancers Clients</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+<title>Graphic Design Blog #1</title>
+<style>
+  /* General Styles */
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  h1, h2, h3 {
+    color: #222;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+  .blog-number {
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    color: #ff6600;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    margin-top: 40px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 5px;
+    font-size: 1.5em;
+  }
+
+  h3 {
+    margin-top: 30px;
+    font-size: 1.3em;
+  }
+
+  p {
+    font-size: 1em;
+    color: #555;
+  }
+
+  ul {
+    padding-left: 20px;
+    margin-bottom: 30px;
+  }
+
+  /* Banner Styles */
+  header img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border-radius: 8px;
+  }
+
+  /* Poster Styles */
+  section img {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border-radius: 8px;
+  }
+
+  section {
+    text-align: center;
+    margin: 40px 0;
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    h1 { font-size: 1.6em; }
+    h2 { font-size: 1.3em; }
+    h3 { font-size: 1.1em; }
+    section img { width: 95%; }
+  }
+
+  @media (max-width: 480px) {
+    h1 { font-size: 1.4em; }
+    h2 { font-size: 1.1em; }
+    h3 { font-size: 1em; }
+    section img { width: 100%; }
+  }
+</style>
 </head>
 <body>
 
-<section class="blog-page">
-  <div class="blog-container">
-    <h1>Graphic Design: Creative Solutions for Brands</h1>
-    <p class="tagline">Transforming Ideas into Visual Masterpieces</p>
+<!-- ================= Banner (Top of Blog) ================= -->
+<header>
+  <img src="bannerblog1.png" alt="Graphic Design: Creative Solutions for Brands Banner">
+</header>
 
-    <h2>Introduction</h2>
-    <p>Graphic design is the art of communicating messages visually. It involves creating logos, brochures, social media posts, websites, and other digital or print materials that convey a brand’s identity and message effectively.</p>
+<!-- ================= Blog Content ================= -->
+<main>
 
-    <h2>Popular Graphic Design Services</h2>
-    <ul>
-      <li>Logo & Branding</li>
-      <li>Social Media Graphics</li>
-      <li>Website & UI Design</li>
-      <li>Marketing Collateral</li>
-      <li>Illustrations & Infographics</li>
-    </ul>
+  <!-- Blog Number -->
+  <div class="blog-number">Blog #1</div>
 
-    <h2>Benefits of Professional Design</h2>
-    <ul>
-      <li>Builds brand recognition</li>
-      <li>Attracts and engages audience</li>
-      <li>Enhances credibility and professionalism</li>
-      <li>Improves marketing effectiveness</li>
-    </ul>
+  <h1>Graphic Design: Creative Solutions for Brands</h1>
+  <p><em>Transforming Ideas into Visual Masterpieces</em></p>
 
-    <p>Contact WhatsApp: <a href="https://wa.me/923483679122" target="_blank">+923483679122</a></p>
-  </div>
-</section>
+  <h2>Introduction</h2>
+  <p>
+    Graphic design is the art of communicating messages visually. It involves creating logos, brochures, social media posts, websites, 
+    and other digital or print materials that convey a brand’s identity and message effectively.
+  </p>
+
+  <!-- ================= Poster Inside Blog ================= -->
+  <section>
+    <h2>Our Services</h2>
+    <img src="posterblog1.png" alt="Graphic Design Services Poster">
+  </section>
+
+  <h3>Popular Graphic Design Services</h3>
+  <ul>
+    <li>Logo & Branding</li>
+    <li>Social Media Graphics</li>
+    <li>Website & UI Design</li>
+    <li>Marketing Collateral</li>
+    <li>Illustrations & Infographics</li>
+  </ul>
+
+  <h3>Benefits of Professional Design</h3>
+  <ul>
+    <li>Builds brand recognition</li>
+    <li>Attracts and engages audience</li>
+    <li>Enhances credibility and professionalism</li>
+    <li>Improves marketing effectiveness</li>
+  </ul>
+</main>
 
 </body>
 </html>
