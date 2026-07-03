@@ -499,4 +499,6 @@ footer a:hover {
 .faq-item p{
     color:#555;
     line-height:1.7;
+}.faq h2 {
+    color: #b08d57; /* gold luxury tone */
 }
