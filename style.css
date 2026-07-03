@@ -453,4 +453,11 @@ footer {
 .footer-social a:hover {
   color: #0d6efd;
   transform: translateY(-4px);
+}footer p a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  color: #0d6efd;
 }
