@@ -413,19 +413,22 @@ footer {
 /* Footer navigation links */
 .footer-nav {
   display: flex;
-  justify-content: center;
-  gap: 30px;          /* horizontal spacing */
-  margin-bottom: 20px; /* vertical space below nav */
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
 }
 
 .footer-nav a {
+  flex: 1;
+  text-align: center;
   color: #ffffff;
   text-decoration: none;
   font-weight: 500;
-  padding: 8px 12px;
+  padding: 8px 4px;
   border-radius: 6px;
   transition: all 0.3s ease;
-  display: inline-block; /* ensures text is visible */
+  font-size: 14px;
 }
 
 .footer-nav a:hover,
