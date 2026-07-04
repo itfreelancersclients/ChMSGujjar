@@ -18,51 +18,7 @@
   gtag('config', 'G-4Z82MS0WBN');
 </script>
 </head>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
 
-  // Track all link & button clicks
-  document.querySelectorAll("a, button").forEach(function (el) {
-    el.addEventListener("click", function () {
-
-      const text = this.innerText.trim() ||
-                   this.getAttribute("aria-label") ||
-                   this.title ||
-                   this.href ||
-                   "Unknown";
-
-      gtag("event", "navigation_click", {
-        link_text: text,
-        from_page: window.location.pathname,
-        destination: this.href || "",
-        page_title: document.title
-      });
-
-      // Track external links
-      if (this.href && this.hostname !== window.location.hostname) {
-        gtag("event", "external_link_click", {
-          url: this.href
-        });
-      }
-
-      // Track file downloads
-      if (this.href && this.href.match(/\.(pdf|zip|doc|docx|xls|xlsx|ppt|pptx)$/i)) {
-        gtag("event", "file_download", {
-          file_name: this.href.split("/").pop()
-        });
-      }
-
-    });
-  });
-
-  // Track page path
-  gtag("event", "page_path_visit", {
-    page_path: window.location.pathname,
-    page_title: document.title
-  });
-
-});
-</script>
 <body>
   <header class="site-header">
   <div class="logo">
@@ -235,6 +191,50 @@ Project delivery depends on its size and complexity. We always provide an estima
 <a class="whatsapp-float" href="https://wa.me/923483679122" target="_blank">
   <i class="fab fa-whatsapp"></i>
 </a>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
+  // Track all link & button clicks
+  document.querySelectorAll("a, button").forEach(function (el) {
+    el.addEventListener("click", function () {
+
+      const text = this.innerText.trim() ||
+                   this.getAttribute("aria-label") ||
+                   this.title ||
+                   this.href ||
+                   "Unknown";
+
+      gtag("event", "navigation_click", {
+        link_text: text,
+        from_page: window.location.pathname,
+        destination: this.href || "",
+        page_title: document.title
+      });
+
+      // Track external links
+      if (this.href && this.hostname !== window.location.hostname) {
+        gtag("event", "external_link_click", {
+          url: this.href
+        });
+      }
+
+      // Track file downloads
+      if (this.href && this.href.match(/\.(pdf|zip|doc|docx|xls|xlsx|ppt|pptx)$/i)) {
+        gtag("event", "file_download", {
+          file_name: this.href.split("/").pop()
+        });
+      }
+
+    });
+  });
+
+  // Track page path
+  gtag("event", "page_path_visit", {
+    page_path: window.location.pathname,
+    page_title: document.title
+  });
+
+});
+</script>
 </body>
 </html>
