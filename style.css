@@ -463,7 +463,8 @@ footer a {
 footer p a:hover,
 footer a:hover {
     color: #0d6efd !important;
-}.testimonials h2{
+}
+.testimonials h2{
     color: #1e293b;   /* Dark Blue */
     text-align: center;
     font-size: 32px;
@@ -501,4 +502,23 @@ footer a:hover {
     line-height:1.7;
 }.faq h2 {
     color: #b08d57; /* gold luxury tone */
+}
+.testimonials {
+    text-align: center;
+}
+
+.testimonial-card {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.testimonial-card h3 {
+    text-align: center;
+}
+
+.testimonial-card p {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
