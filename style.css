@@ -526,24 +526,34 @@ footer a:hover {
     align-items:center;
     padding:15px 20px;
 }
-.payment-btn{
-    background:#D4AF37;
-    color:#ffffff;
-    text-decoration:none;
-    padding:10px 18px;
-    border-radius:8px;
-    font-weight:bold;
-    font-size:16px;
-    display:inline-block;
-    transition:.3s;
+.site-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
 }
 
-.payment-btn:hover{
-    background:#c89f2d;
-    color:#ffffff;
-}.payment-btn,
-.payment-btn:link,
-.payment-btn:visited{
-    color:#ffffff !important;
-    text-decoration:none;
+.pay-btn{
+    background: #D4AF37;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    transition: 0.3s;
+}
+
+.pay-btn:link,
+.pay-btn:visited,
+.pay-btn:hover,
+.pay-btn:active{
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.pay-btn:hover{
+    background: #c89f2d;
 }
