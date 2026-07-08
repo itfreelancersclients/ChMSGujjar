@@ -556,4 +556,14 @@ footer a:hover {
 
 .pay-btn:hover{
     background: #c89f2d;
+}#binance,
+#okx{
+    display:block;
+    width:100%;
+    word-break:break-all;
+    overflow-wrap:break-word;
+    white-space:normal;
+    font-size:15px;
+    line-height:1.6;
+    margin:10px 0;
 }
