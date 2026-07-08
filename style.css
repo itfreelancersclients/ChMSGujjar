@@ -516,7 +516,6 @@ footer a:hover {
 .testimonial-card h3 {
     text-align: center;
 }
-
 .testimonial-card p {
     text-align: center;
     max-width: 600px;
@@ -542,4 +541,9 @@ footer a:hover {
 .payment-btn:hover{
     background:#c89f2d;
     color:#ffffff;
+}.payment-btn,
+.payment-btn:link,
+.payment-btn:visited{
+    color:#ffffff !important;
+    text-decoration:none;
 }
