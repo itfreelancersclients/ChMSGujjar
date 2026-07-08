@@ -521,4 +521,25 @@ footer a:hover {
     text-align: center;
     max-width: 600px;
     margin: 0 auto;
+}.site-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+}
+
+.payment-btn{
+    background:#D4AF37;
+    color:#000080;
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:8px;
+    font-weight:bold;
+    font-size:16px;
+    transition:.3s;
+}
+
+.payment-btn:hover{
+    background:#f2c94c;
+    transform:scale(1.05);
 }

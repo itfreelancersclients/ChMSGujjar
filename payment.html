@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Methods | IT Freelancers Clients</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f5f5f5;
+}
+
+header{
+background:#000080;
+color:#D4AF37;
+padding:20px;
+text-align:center;
+}
+
+.container{
+max-width:900px;
+margin:30px auto;
+padding:20px;
+}
+
+.card{
+background:#fff;
+border:2px solid #D4AF37;
+border-radius:12px;
+padding:20px;
+margin-bottom:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.card h2{
+color:#000080;
+margin-bottom:15px;
+}
+
+.card p{
+margin:8px 0;
+}
+
+.btn{
+display:inline-block;
+margin-top:15px;
+background:#000080;
+color:#fff;
+padding:10px 20px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.copy-btn{
+margin-top:10px;
+padding:8px 15px;
+background:#D4AF37;
+border:none;
+cursor:pointer;
+font-weight:bold;
+border-radius:6px;
+}
+
+.note{
+background:#fff8e1;
+border-left:5px solid #D4AF37;
+padding:15px;
+margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>💳 Payment Methods</h1>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>Payoneer</h2>
+
+<p>Pay securely using Payoneer.</p>
+
+<a href="YOUR_PAYONEER_PAYMENT_LINK" target="_blank" class="btn">
+Pay with Payoneer
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>SadaPay Business</h2>
+
+<p>Pay securely using SadaPay.</p>
+
+<a href="YOUR_SADAPAY_PAYMENT_LINK" target="_blank" class="btn">
+Pay with SadaPay
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>Binance (USDT BEP20)</h2>
+
+<p><b>UID:</b> YOUR_BINANCE_UID</p>
+
+<p><b>Network:</b> BEP20 (BSC)</p>
+
+<p id="binance">
+YOUR_USDT_BEP20_ADDRESS
+</p>
+
+<button class="copy-btn"
+onclick="copyText('binance')">
+Copy Address
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>OKX (USDT BEP20)</h2>
+
+<p><b>UID:</b> YOUR_OKX_UID</p>
+
+<p><b>Network:</b> BEP20 (BSC)</p>
+
+<p id="okx">
+YOUR_OKX_USDT_ADDRESS
+</p>
+
+<button class="copy-btn"
+onclick="copyText('okx')">
+Copy Address
+</button>
+
+</div>
+
+<div class="note">
+
+<b>Important:</b>
+
+Only send USDT through the BEP20 (BSC) network.
+
+After payment, please send your Transaction ID (TXID) and Order ID through WhatsApp or Email for verification.
+
+</div>
+
+</div>
+
+<script>
+function copyText(id){
+
+const text=document.getElementById(id).innerText;
+
+navigator.clipboard.writeText(text);
+
+alert("Wallet Address Copied");
+
+}
+</script>
+
+</body>
+</html>
