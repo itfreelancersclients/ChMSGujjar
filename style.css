@@ -575,4 +575,17 @@ footer a:hover {
     white-space:normal;
     font-size:15px;
     line-height:1.6;
+}.card{
+    overflow:hidden;
+}
+
+.exchange-address,
+.wallet-address{
+    display:block;
+    width:100%;
+    max-width:100%;
+    word-break:break-all;
+    overflow-wrap:anywhere;
+    white-space:normal;
+    box-sizing:border-box;
 }
