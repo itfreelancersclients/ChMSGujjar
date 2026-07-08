@@ -527,19 +527,19 @@ footer a:hover {
     align-items:center;
     padding:15px 20px;
 }
-
 .payment-btn{
     background:#D4AF37;
-    color:#000080;
+    color:#ffffff;
     text-decoration:none;
     padding:10px 18px;
     border-radius:8px;
     font-weight:bold;
     font-size:16px;
+    display:inline-block;
     transition:.3s;
 }
 
 .payment-btn:hover{
-    background:#f2c94c;
-    transform:scale(1.05);
+    background:#c89f2d;
+    color:#ffffff;
 }
