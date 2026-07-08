@@ -566,12 +566,13 @@ footer a:hover {
     font-size:15px;
     line-height:1.6;
     margin:10px 0;
-}/* Wallet Address */
+}.exchange-address,
 .wallet-address{
-    word-break: break-all;
-    overflow-wrap: break-word;
-    white-space: normal;
-    font-size: 15px;
-    line-height: 1.6;
-    color: #333;
+    display:block;
+    width:100%;
+    word-break:break-all;
+    overflow-wrap:anywhere;
+    white-space:normal;
+    font-size:15px;
+    line-height:1.6;
 }
