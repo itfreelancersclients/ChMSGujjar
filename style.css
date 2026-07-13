@@ -662,4 +662,45 @@ footer a:hover {
     overflow-wrap:anywhere;
     white-space:normal;
     box-sizing:border-box;
+}.services-nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: #000080;
+  border-bottom: 2px solid #D4AF37;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 12px 10px;
+}
+
+.services-nav-inner {
+  display: inline-flex;
+  gap: 10px;
+}
+
+.services-nav a {
+  color: #D4AF37;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border: 1px solid #D4AF37;
+  border-radius: 20px;
+  transition: 0.3s ease;
+  flex-shrink: 0;
+}
+
+.services-nav a:hover {
+  background: #D4AF37;
+  color: #000080;
+}
+
+/* Smooth scroll for whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent section hiding behind sticky nav when jumping */
+.services-section {
+  scroll-margin-top: 70px;
 }
