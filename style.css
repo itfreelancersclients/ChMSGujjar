@@ -9,20 +9,33 @@ body {
 .hero {
   padding: 50px 20px;
   text-align: center;
-  background: linear-gradient(135deg,#4f46e5,#22c55e);
-  color: #fff;
+  background: #000080;
+  color: #D4AF37;
 }
-.hero h1 {font-size: 32px;}
-.hero p {max-width: 700px; margin: 15px auto;}
+.hero h1 {
+  font-size: 32px;
+  color: #D4AF37;
+}
+.hero p {
+  max-width: 700px;
+  margin: 15px auto;
+  color: #D4AF37;
+}
 .btn {
   display: inline-block;
   margin-top: 20px;
-  background: #25d366;
-  color: #fff;
+  background: #D4AF37;
+  color: #000080;
   padding: 12px 25px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
+  border: 2px solid #D4AF37;
+  transition: 0.3s ease;
+}
+.btn:hover {
+  background: transparent;
+  color: #D4AF37;
 }
 
 /* ===========================
