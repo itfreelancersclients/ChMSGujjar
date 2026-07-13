@@ -62,21 +62,40 @@ body {
 }
 
 
-/* Service Card */
-
 .service-card {
-    background: white;
-    padding: 30px 20px;
+    background: #000080; /* Navy Blue */
+    border: 2px solid #D4AF37; /* Gold Border */
     border-radius: 18px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    padding: 35px 28px;
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.18);
     transition: 0.3s ease;
-    border: 1px solid #eee;
 }
 
+.service-icon {
+    font-size: 58px;
+    color: #D4AF37;
+}
 
-.service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+.service-card h3 {
+    color: #D4AF37; /* Gold Heading */
+    font-size: 27px;
+}
+
+.service-card p {
+    color: #D4AF37; /* Gold Description */
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.learn-btn {
+    border: 2px solid #D4AF37;
+    color: #D4AF37;
+}
+
+.start-btn {
+    background: #D4AF37;
+    color: #000080;
 }
 
 
