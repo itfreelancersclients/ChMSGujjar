@@ -344,11 +344,6 @@ footer {
 }
 
 /* Banner Text */
-.hero-content {
-  text-align: center;
-  color: #ffffff;
-  max-width: 800px;
-}
 
 .hero-content {
   text-align: center;
@@ -362,7 +357,14 @@ footer {
   margin-bottom: 30px;
   color: #D4AF37;
 }
-
+.hero-content h1 {
+  background: linear-gradient(180deg, #f5e199 0%, #D4AF37 50%, #a6820f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  text-shadow: 0 2px 3px rgba(0,0,0,0.35);
+}
 /* Button */
 .btn-cta {
   display: inline-block;
