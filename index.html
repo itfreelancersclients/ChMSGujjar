@@ -34,7 +34,7 @@
 <section class="hero-banner">
   <!-- Poster Image -->
   <div class="front-poster">
-    <img src="banner 1.png" alt="IT Freelancers Clients Poster" class="poster-img">
+    <img src="banner1.png" alt="IT Freelancers Clients Poster" class="poster-img">
   </div>
 
   <!-- Banner Content -->
@@ -45,64 +45,492 @@
   </div>
 
 </section>
+/* ==========================================
+   PREMIUM SERVICES SECTION
+========================================== */
 
-<!-- SERVICES -->
-<section class="services">
-  <h2>Our Services</h2>
+.services-section{
+    background:#f5f7fa;
+    padding:80px 20px;
+}
 
-  <div class="service-grid">
+.services-title{
+    text-align:center;
+    color:#000080;
+    font-size:42px;
+    font-weight:700;
+    margin-bottom:15px;
+}
 
-    <a class="service-card" href="https://wa.me/923483679122?text=Hi%2C%20I%20am%20interested%20in%20Freelancing%20service">
-      <i class="fas fa-user-tie"></i>
-      <h3>Freelancing</h3>
-    </a>
+.services-subtitle{
+    max-width:850px;
+    margin:0 auto 60px;
+    text-align:center;
+    color:#555;
+    font-size:18px;
+    line-height:1.8;
+}
 
-    <a class="service-card" href="https://wa.me/923483679122?text=Hi%2C%20I%20am%20interested%20in%20Graphic%20Design%20service">
-      <i class="fas fa-paint-brush"></i>
-      <h3>Graphic Design</h3>
-    </a>
+.services-grid{
+    max-width:1300px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:35px;
+}
 
-    <a class="service-card" href="https://wa.me/923483679122?text=Hi%2C%20I%20am%20interested%20in%20Video%20Editing%20service">
-      <i class="fas fa-video"></i>
-      <h3>Video Editing</h3>
-    </a>
+.service-card{
 
-    <a class="service-card" href="https://wa.me/923483679122?text=Hi%2C%20I%20am%20interested%20in%20SEO%20service">
-      <i class="fas fa-chart-line"></i>
-      <h3>SEO</h3>
-    </a>
+    background:#000080;
 
-    <a class="service-card" href="https://wa.me/923483679122?text=Hi%2C%20I%20am%20interested%20in%20Digital%20Marketing%20service">
-      <i class="fas fa-bullhorn"></i>
-      <h3>Digital Marketing</h3>
-    </a>
+    border:2px solid #D4AF37;
 
-    <a class="service-card" href="https://wa.me/923483679122?text=Hi%2C%20I%20am%20interested%20in%20Affiliate%20Marketing%20service">
-      <i class="fas fa-link"></i>
-      <h3>Affiliate Marketing</h3>
-    </a>
+    border-radius:18px;
 
-    <a class="service-card" href="https://wa.me/923483679122?text=Hi%2C%20I%20am%20interested%20in%20Virtual%20Assistant%20service">
-      <i class="fas fa-headset"></i>
-      <h3>Virtual Assistant</h3>
-    </a>
+    padding:35px 28px;
 
-    <a class="service-card" href="https://wa.me/923483679122?text=Hi%2C%20I%20am%20interested%20in%20E-commerce%20Management%20service">
-      <i class="fas fa-cart-shopping"></i>
-      <h3>E-commerce Management</h3>
-    </a>
+    text-align:center;
 
-    <a class="service-card" href="https://wa.me/923483679122?text=Hi%2C%20I%20am%20interested%20in%20Communication%20and%20Soft%20Skills%20service">
-      <i class="fas fa-comments"></i>
-      <h3>Communication & Soft Skills</h3>
-    </a>
+    transition:.35s ease;
 
-    <a class="service-card" href="https://wa.me/923483679122?text=Hi%2C%20I%20am%20interested%20in%20Web%20Development%20service">
-      <i class="fas fa-code"></i>
-      <h3>Web Development</h3>
-    </a>
+    box-shadow:0 12px 35px rgba(0,0,0,.18);
 
-  </div>
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+}
+
+.service-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:-120%;
+
+width:120%;
+height:100%;
+
+background:rgba(255,255,255,.08);
+
+transform:skewX(-25deg);
+
+transition:.6s;
+
+}
+
+.service-card:hover::before{
+
+left:120%;
+
+}
+
+.service-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 45px rgba(0,0,0,.30);
+
+}
+
+.service-icon{
+
+font-size:58px;
+
+margin-bottom:18px;
+
+}
+
+.service-card h3{
+
+color:#D4AF37;
+
+font-size:27px;
+
+margin-bottom:15px;
+
+}
+
+.service-card p{
+
+color:#ffffff;
+
+font-size:16px;
+
+line-height:1.8;
+
+margin-bottom:30px;
+
+flex-grow:1;
+
+}
+
+.service-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:12px;
+
+flex-wrap:wrap;
+
+}
+
+.learn-btn{
+
+background:transparent;
+
+border:2px solid #D4AF37;
+
+color:#D4AF37;
+
+padding:12px 24px;
+
+border-radius:8px;
+
+text-decoration:none;
+
+font-weight:700;
+
+transition:.3s;
+
+}
+
+.learn-btn:hover{
+
+background:#D4AF37;
+
+color:#000080;
+
+}
+
+.start-btn{
+
+background:#D4AF37;
+
+color:#000080;
+
+padding:12px 24px;
+
+border-radius:8px;
+
+text-decoration:none;
+
+font-weight:700;
+
+transition:.3s;
+
+}
+
+.start-btn:hover{
+
+background:#ffffff;
+
+color:#000080;
+
+}
+
+@media(max-width:992px){
+
+.services-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.services-title{
+
+font-size:32px;
+
+}
+
+.services-subtitle{
+
+font-size:16px;
+
+}
+
+.services-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.service-card{
+
+padding:30px 22px;
+
+}
+
+.service-icon{
+
+font-size:50px;
+
+}
+
+.service-card h3{
+
+font-size:24px;
+
+}
+
+}<!-- ===========================
+     Premium Services Section
+=========================== -->
+
+<section class="services-section">
+
+<h2 class="services-title">Our Professional Services</h2>
+
+<p class="services-subtitle">
+Delivering premium digital solutions for businesses, entrepreneurs, startups,
+and global clients with creativity, innovation, and excellence.
+</p>
+
+<div class="services-grid">
+
+<!-- 1 -->
+<div class="service-card">
+<div class="service-icon">🚀</div>
+<h3>Freelancing</h3>
+<p>Connecting businesses with professional freelance solutions worldwide.</p>
+<div class="service-buttons">
+<a href="freelancing.html" class="learn-btn">Learn More</a>
+<a href="https://wa.me/923483679122?text=Hi,%20I%20need%20Freelancing%20services." class="start-btn">Get Started</a>
+</div>
+</div>
+
+<!-- 2 -->
+<div class="service-card">
+<div class="service-icon">🎨</div>
+<h3>Graphic Design</h3>
+<p>Luxury branding, logos, social media designs and premium visual identity.</p>
+<div class="service-buttons">
+<a href="graphic-design.html" class="learn-btn">Learn More</a>
+<a href="https://wa.me/923483679122?text=Hi,%20I%20need%20Graphic%20Design%20services." class="start-btn">Get Started</a>
+</div>
+</div>
+
+<!-- 3 -->
+<div class="service-card">
+<div class="service-icon">🎬</div>
+<h3>Video Editing</h3>
+<p>Professional cinematic editing for YouTube, business and social media.</p>
+<div class="service-buttons">
+<a href="video-editing.html" class="learn-btn">Learn More</a>
+<a href="https://wa.me/923483679122?text=Hi,%20I%20need%20Video%20Editing%20services." class="start-btn">Get Started</a>
+</div>
+</div>
+
+<!-- 4 -->
+<div class="service-card">
+<div class="service-icon">🔍</div>
+<h3>SEO</h3>
+<p>Improve rankings, increase traffic and grow your online visibility.</p>
+<div class="service-buttons">
+<a href="seo.html" class="learn-btn">Learn More</a>
+<a href="https://wa.me/923483679122?text=Hi,%20I%20need%20SEO%20services." class="start-btn">Get Started</a>
+</div>
+</div>
+
+<!-- 5 -->
+<div class="service-card">
+<div class="service-icon">📈</div>
+<h3>Digital Marketing</h3>
+<p>Strategic campaigns designed to generate leads and boost sales.</p>
+<div class="service-buttons">
+<a href="digital-marketing.html" class="learn-btn">Learn More</a>
+<a href="https://wa.me/923483679122?text=Hi,%20I%20need%20Digital%20Marketing%20services." class="start-btn">Get Started</a>
+</div>
+</div>
+
+<!-- 6 -->
+<div class="service-card">
+<div class="service-icon">💰</div>
+<h3>Affiliate Marketing</h3>
+<p>Build profitable affiliate systems with proven growth strategies.</p>
+<div class="service-buttons">
+<a href="affiliate-marketing.html" class="learn-btn">Learn More</a>
+<a href="https://wa.me/923483679122?text=Hi,%20I%20need%20Affiliate%20Marketing%20services." class="start-btn">Get Started</a>
+</div>
+</div>
+
+<!-- 7 -->
+<div class="service-card">
+<div class="service-icon">💼</div>
+<h3>Virtual Assistant</h3>
+<p>Reliable remote support for business operations and productivity.</p>
+<div class="service-buttons">
+<a href="virtual-assistant.html" class="learn-btn">Learn More</a>
+<a href="https://wa.me/923483679122?text=Hi,%20I%20need%20Virtual%20Assistant%20services." class="start-btn">Get Started</a>
+</div>
+</div>
+
+<!-- 8 -->
+<div class="service-card">
+<div class="service-icon">🛒</div>
+<h3>E-commerce Management</h3>
+<p>Complete store management for Amazon, Shopify, WooCommerce and more.</p>
+<div class="service-buttons">
+<a href="ecommerce-management.html" class="learn-btn">Learn More</a>
+<a href="https://wa.me/923483679122?text=Hi,%20I%20need%20E-commerce%20Management%20services." class="start-btn">Get Started</a>
+</div>
+</div>
+
+<!-- 9 -->
+<div class="service-card">
+<div class="service-icon">🎓</div>
+<h3>Communication & Soft Skills</h3>
+<p>Professional communication skills for freelancers and business success.</p>
+<div class="service-buttons">
+<a href="communication-soft-skills.html" class="learn-btn">Learn More</a>
+<a href="https://wa.me/923483679122?text=Hi,%20I%20need%20Communication%20and%20Soft%20Skills%20training." class="start-btn">Get Started</a>
+</div>
+</div>
+
+<!-- 10 -->
+<div class="service-card">
+<div class="service-icon">💻</div>
+<h3>App & Web Development</h3>
+<p>Modern websites and applications built for performance and growth.</p>
+<div class="service-buttons">
+<a href="app-web-development.html" class="learn-btn">Learn More</a>
+<a href="https://wa.me/923483679122?text=Hi,%20I%20need%20App%20and%20Web%20Development%20services." class="start-btn">Get Started</a>
+</div>
+</div>
+
+</div>
+
+</section><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graphic Design | IT Freelancers & Clients Network</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="hero">
+<h1>Graphic Design</h1>
+<p>Premium creative design solutions that help businesses build a strong and memorable brand identity.</p>
+
+<a href="https://wa.me/923483679122?text=Hi,%20I%20need%20Graphic%20Design%20services." class="start-btn">
+Get Started
+</a>
+</section>
+
+<section class="services-section">
+
+<h2 class="services-title">What We Offer</h2>
+
+<div class="services-grid">
+
+<div class="service-card">
+<div class="service-icon">🎨</div>
+
+<h3>Logo Design</h3>
+
+<p>Create a professional and memorable logo for your business.</p>
+
+</div>
+
+<div class="service-card">
+<div class="service-icon">📱</div>
+
+<h3>Social Media Design</h3>
+
+<p>Premium posts, banners and advertisements.</p>
+
+</div>
+
+<div class="service-card">
+<div class="service-icon">🖨️</div>
+
+<h3>Print Design</h3>
+
+<p>Business cards, flyers, brochures and posters.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="services-section">
+
+<h2 class="services-title">Why Choose Us?</h2>
+
+<div class="services-grid">
+
+<div class="service-card">
+
+<div class="service-icon">⭐</div>
+
+<h3>Professional Quality</h3>
+
+<p>High-quality work with attention to every detail.</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">⚡</div>
+
+<h3>Fast Delivery</h3>
+
+<p>Projects completed on time without compromising quality.</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">🤝</div>
+
+<h3>Client Satisfaction</h3>
+
+<p>Your satisfaction is our highest priority.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="services-section">
+
+<h2 class="services-title">Ready To Start?</h2>
+
+<p class="services-subtitle">
+
+Let's discuss your project today.
+
+</p>
+
+<div style="text-align:center;">
+
+<a href="https://wa.me/923483679122?text=Hi,%20I%20want%20Graphic%20Design%20services." class="start-btn">
+
+Contact Now
+
+</a>
+
+</div>
+
 </section>
 </section> <!-- Services section end -->
 <section class="testimonials">

@@ -25,34 +25,121 @@ body {
   font-weight: bold;
 }
 
-/* SERVICES */
-.services {
-  padding: 40px 20px;
+/* ===========================
+   Premium Services Section
+=========================== */
+
+.services-section {
+    padding: 70px 20px;
+    background: #f8f9fc;
+    text-align: center;
 }
-.services h2 {
-  text-align: center;
-  margin-bottom: 25px;
+
+.services-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 15px;
 }
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
-  gap: 15px;
+
+.services-subtitle {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
 }
+
+
+/* Services Grid */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* Service Card */
+
 .service-card {
-  background: #fff;
-  padding: 20px;
-  text-align: center;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  text-decoration: none;
-  color: #222;
+    background: white;
+    padding: 30px 20px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+    border: 1px solid #eee;
 }
-.service-card i {
-  font-size: 30px;
-  color: #4f46e5;
-}
+
+
 .service-card:hover {
-  transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+
+/* Icon */
+
+.service-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+
+/* Heading */
+
+.service-card h3 {
+    font-size: 22px;
+    color: #1f2937;
+    margin-bottom: 12px;
+}
+
+
+/* Description */
+
+.service-card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+
+/* Button */
+
+.service-card a {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 22px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.service-card a:hover {
+    background: #1d4ed8;
+}
+
+
+/* Mobile Responsive */
+
+@media(max-width:768px){
+
+    .services-title {
+        font-size: 28px;
+    }
+
+    .services-subtitle {
+        font-size: 16px;
+    }
+
+    .service-card {
+        padding: 25px 15px;
+    }
+
 }
 
 /* FOOTER */
