@@ -50,9 +50,6 @@ body {
     color: #555;
 }
 
-
-/* Services Grid */
-
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -61,10 +58,9 @@ body {
     margin: auto;
 }
 
-
 .service-card {
-    background: #000080; /* Navy Blue */
-    border: 2px solid #D4AF37; /* Gold Border */
+    background: #000080;
+    border: 2px solid #D4AF37;
     border-radius: 18px;
     padding: 35px 28px;
     text-align: center;
@@ -72,93 +68,65 @@ body {
     transition: 0.3s ease;
 }
 
-.service-icon {
-    font-size: 58px;
-    color: #D4AF37;
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
 }
-
-.service-card h3 {
-    color: #D4AF37; /* Gold Heading */
-    font-size: 27px;
-}
-
-.service-card p {
-    color: #D4AF37; /* Gold Description */
-    font-size: 16px;
-    line-height: 1.8;
-}
-
-.learn-btn {
-    border: 2px solid #D4AF37;
-    color: #D4AF37;
-}
-
-.start-btn {
-    background: #D4AF37;
-    color: #000080;
-}
-
-
-/* Icon */
 
 .service-icon {
-    font-size: 45px;
+    font-size: 50px;
+    color: #D4AF37;
     margin-bottom: 20px;
 }
 
-
-/* Heading */
-
 .service-card h3 {
-    font-size: 22px;
-    color: #1f2937;
+    color: #D4AF37;
+    font-size: 24px;
     margin-bottom: 12px;
 }
 
-
-/* Description */
-
 .service-card p {
+    color: #f0e6c8;
     font-size: 16px;
-    color: #666;
     line-height: 1.6;
 }
 
-
-/* Button */
-
-.service-card a {
+.learn-btn {
     display: inline-block;
-    margin-top: 18px;
+    margin: 18px 6px 0;
     padding: 10px 22px;
-    background: #2563eb;
-    color: white;
+    border: 2px solid #D4AF37;
+    color: #D4AF37;
+    background: transparent;
     text-decoration: none;
     border-radius: 30px;
     transition: 0.3s;
 }
 
-.service-card a:hover {
-    background: #1d4ed8;
+.learn-btn:hover {
+    background: #D4AF37;
+    color: #000080;
 }
 
+.start-btn {
+    display: inline-block;
+    margin: 18px 6px 0;
+    padding: 10px 22px;
+    background: #D4AF37;
+    color: #000080;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
 
-/* Mobile Responsive */
+.start-btn:hover {
+    background: #c89f2d;
+}
 
 @media(max-width:768px){
-
-    .services-title {
-        font-size: 28px;
-    }
-
-    .services-subtitle {
-        font-size: 16px;
-    }
-
-    .service-card {
-        padding: 25px 15px;
-    }
-
+    .services-title { font-size: 28px; }
+    .services-subtitle { font-size: 16px; }
+    .service-card { padding: 25px 15px; }
 }
 
 /* FOOTER */
