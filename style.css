@@ -350,33 +350,36 @@ footer {
   max-width: 800px;
 }
 
-.hero-content h1 {
-  font-size: 42px;
-  margin-bottom: 15px;
+.hero-content {
+  text-align: center;
+  color: #D4AF37;
+  max-width: 800px;
 }
 
 .hero-content p {
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 30px;
-  color: #e0e0e0;
+  color: #D4AF37;
 }
 
 /* Button */
 .btn-cta {
   display: inline-block;
   padding: 14px 36px;
-  background: #0d6efd;
-  color: #fff;
+  background: #D4AF37;
+  color: #000080;
   text-decoration: none;
   border-radius: 30px;
   font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #D4AF37;
   transition: all 0.3s ease;
 }
 
 .btn-cta:hover {
-  background: #ffffff;
-  color: #0d6efd;
+  background: transparent;
+  color: #D4AF37;
   transform: translateY(-3px);
 }/* FIX: Hero Banner & Next Section Spacing */
 
