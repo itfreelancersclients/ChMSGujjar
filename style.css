@@ -668,12 +668,12 @@ html {
 
 .blog-services {
     padding: 70px 20px;
-    background: #000080;
+    background: #f8f9fc;
     text-align: center;
 }
 
 .blog-services h1 {
-    color: #D4AF37;
+    color: #000080;
     font-size: 32px;
     margin-bottom: 40px;
 }
@@ -688,7 +688,7 @@ html {
 }
 
 .blog-card {
-    background: #ffffff;
+    background: #000080;
     border: 2px solid #D4AF37;
     border-radius: 18px;
     padding: 35px 28px;
@@ -705,19 +705,19 @@ html {
 
 .blog-card i {
     font-size: 45px;
-    color: #000080;
+    color: #D4AF37;
     margin-bottom: 18px;
     display: block;
 }
 
 .blog-card h3 {
-    color: #000080;
+    color: #D4AF37;
     font-size: 22px;
     margin-bottom: 12px;
 }
 
 .blog-card p {
-    color: #333;
+    color: #f0e6c8;
     font-size: 15px;
     line-height: 1.6;
 }
