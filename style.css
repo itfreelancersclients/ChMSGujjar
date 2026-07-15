@@ -75,6 +75,7 @@ body {
     gap: 25px;
     max-width: 1200px;
     margin: auto;
+    padding: 40px 20px 60px;
 }
 
 .service-card {
