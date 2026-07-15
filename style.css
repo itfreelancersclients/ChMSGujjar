@@ -170,6 +170,10 @@ footer {
   text-align: center;
   margin-top: auto;   /* pushes footer to bottom even on short pages */
   flex-shrink: 0;
+  
+    width: 100%;
+    box-sizing: border-box;
+}
 }
 
 .footer-nav {
@@ -662,4 +666,14 @@ html {
   .portfolio-grid {
     grid-template-columns: 1fr;
   }
+}.portfolio-grid {
+    flex: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer {
+    width: 100%;
+    box-sizing: border-box;
+    clear: both;
 }
