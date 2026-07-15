@@ -63,13 +63,26 @@
             text-decoration: none;
             font-size: 16px;
         }
-        .vf-nav a.active {
-            background: #D4AF37;
-            color: #000080;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: bold;
-        }
+        .vf-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.vf-nav a {
+    color: #fff;
+    margin: 0 8px;
+    text-decoration: none;
+    font-size: 15px;
+    white-space: nowrap;
+}
+.vf-nav a.active {
+    background: #D4AF37;
+    color: #000080;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+}
         .vf-social {
             margin-bottom: 15px;
         }
