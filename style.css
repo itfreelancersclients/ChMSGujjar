@@ -721,4 +721,18 @@ html {
     color: #f0e6c8;
     font-size: 15px;
     line-height: 1.6;
+}.coming-soon {
+    text-align: center;
+    padding: 40px 20px;
+}
+.coming-soon-icon {
+    font-size: 60px;
+    color: #0d6efd;
+    margin-bottom: 20px;
+}
+.coming-soon hr {
+    border: none;
+    border-top: 2px solid #eee;
+    width: 60%;
+    margin: 20px auto;
 }
