@@ -658,4 +658,8 @@ html {
     border-top: 2px solid #eee;
     width: 60%;
     margin: 20px auto;
+}@media (max-width: 600px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
 }
