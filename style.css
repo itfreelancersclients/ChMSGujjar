@@ -1,11 +1,22 @@
+/* =========================================================
+   BASE
+========================================================= */
+html, body {
+  height: 100%;
+}
 body {
   margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: Arial, sans-serif;
   background: #f4f6f9;
   color: #222;
 }
 
-/* HERO */
+/* =========================================================
+   HERO
+========================================================= */
 .hero {
   padding: 50px 20px;
   text-align: center;
@@ -38,10 +49,9 @@ body {
   color: #D4AF37;
 }
 
-/* ===========================
-   Premium Services Section
-=========================== */
-
+/* =========================================================
+   PREMIUM SERVICES SECTION
+========================================================= */
 .services-section {
     padding: 70px 20px;
     background: #f8f9fc;
@@ -149,34 +159,102 @@ body {
     .service-card { padding: 25px 15px; }
 }
 
-/* FOOTER */
+/* =========================================================
+   FOOTER (single, consolidated, conflict-free version)
+   Classes used across all pages: footer-nav, footer-social
+========================================================= */
 footer {
-  background: #111827;
-  padding: 20px;
+  background: #000080;
+  color: #fff;
+  padding: 20px 15px;
   text-align: center;
-}
-.social a {
-  color: #fff;
-  margin: 0 10px;
-  font-size: 20px;
-}
-.bottom-nav a {
-  color: #fff;
-  margin: 0 10px;
-  text-decoration: none;
-}
-.bottom-nav .active {
-  text-decoration: underline;
+  margin-top: auto;   /* pushes footer to bottom even on short pages */
+  flex-shrink: 0;
 }
 
-/* PAGE */
+.footer-nav {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.footer-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.footer-nav a:hover,
+.footer-nav a.active {
+  background: #D4AF37;
+  color: #000080;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 15px;
+}
+
+.footer-social a {
+  color: #ffffff;
+  font-size: 22px;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #D4AF37;
+  transform: translateY(-4px);
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer p a,
+footer a {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+footer p a:hover,
+footer a:hover {
+  color: #D4AF37 !important;
+}
+
+@media (max-width: 480px) {
+  .footer-nav a {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+  .footer-social a {
+    font-size: 18px;
+  }
+}
+
+/* =========================================================
+   PAGE (generic content wrapper)
+========================================================= */
 .page {
   padding: 40px 20px;
   max-width: 900px;
   margin: auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* WHATSAPP FLOAT */
+/* =========================================================
+   WHATSAPP FLOAT
+========================================================= */
 .whatsapp-float {
   position: fixed;
   right: 20px;
@@ -188,6 +266,9 @@ footer {
   font-size: 24px;
 }
 
+/* =========================================================
+   BLOG CONTAINER
+========================================================= */
 .blog-container {
   max-width: 900px;
   margin: auto;
@@ -217,10 +298,16 @@ footer {
   font-size: 16px;
   line-height: 1.7;
   color: #333;
-}.blog-container ul {
+}
+
+.blog-container ul {
   padding-left: 20px;
   margin-top: 15px;
-}/* Header Styling */
+}
+
+/* =========================================================
+   SITE HEADER
+========================================================= */
 .site-header {
   display: flex;
   justify-content: space-between;
@@ -234,15 +321,13 @@ footer {
   z-index: 1000;
 }
 
-/* Logo Styling */
 .site-header .logo img {
-  height: 60px; /* لوگو کا size */
+  height: 60px;
   width: auto;
   display: block;
-  border-radius: 8px; /* optional */
+  border-radius: 8px;
 }
 
-/* Navigation Styling */
 .site-header .main-nav a {
   color: #fff;
   text-decoration: none;
@@ -252,8 +337,37 @@ footer {
 }
 
 .site-header .main-nav a:hover {
-  color: #0d6efd; /* hover color */
-}/* HERO BANNER */
+  color: #0d6efd;
+}
+
+.pay-btn {
+  background: #D4AF37;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
+  border: none;
+  transition: 0.3s;
+}
+
+.pay-btn:link,
+.pay-btn:visited,
+.pay-btn:hover,
+.pay-btn:active {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.pay-btn:hover {
+  background: #c89f2d;
+}
+
+/* =========================================================
+   HERO BANNER
+========================================================= */
 .hero-banner {
   width: 100%;
   min-height: 100vh;
@@ -262,11 +376,10 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 60px 20px;
+  padding: 60px 20px 80px;
   box-sizing: border-box;
 }
 
-/* Poster Image */
 .front-poster {
   width: 100%;
   max-width: 900px;
@@ -278,8 +391,6 @@ footer {
   border-radius: 18px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.35);
 }
-
-/* Banner Text */
 
 .hero-content {
   text-align: center;
@@ -293,6 +404,7 @@ footer {
   margin-bottom: 30px;
   color: #D4AF37;
 }
+
 .hero-content h1 {
   background: linear-gradient(180deg, #f5e199 0%, #D4AF37 50%, #a6820f 100%);
   -webkit-background-clip: text;
@@ -301,7 +413,7 @@ footer {
   font-weight: 700;
   text-shadow: 0 2px 3px rgba(0,0,0,0.35);
 }
-/* Button */
+
 .btn-cta {
   display: inline-block;
   padding: 14px 36px;
@@ -319,224 +431,36 @@ footer {
   background: transparent;
   color: #D4AF37;
   transform: translateY(-3px);
-}/* FIX: Hero Banner & Next Section Spacing */
-
-.hero-banner {
-  padding-bottom: 80px;   /* Hero ke niche space */
 }
 
 .hero-banner + section,
 .hero-banner + .services,
 .hero-banner + .container {
-  margin-top: 60px;       /* Hero ke baad wali section se gap */
+  margin-top: 60px;
 }
 
-/* Mobile view ke liye */
 @media (max-width: 768px) {
   .hero-banner {
     padding-bottom: 60px;
   }
-
   .hero-banner + section,
   .hero-banner + .services,
   .hero-banner + .container {
     margin-top: 40px;
   }
-}/* ===== FOOTER & SOCIAL ICONS ===== */
-
-footer {
-  padding: 25px 0 30px;   /* upar niche balanced spacing */
-  background: #0f2027;
 }
 
-/* Social icons wrapper */
-.social {
-  display: flex;
-  justify-content: center;
-  gap: 14px;              /* icons ke darmiyan gap */
-  margin-top: 8px;       /* pages aur icons ka gap kam */
-}
-
-/* Individual icon */
-.social a {
-  width: 44px;
-  height: 44px;
-  background: linear-gradient(135deg, #0d6efd, #6610f2);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  font-size: 18px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-}
-
-/* Hover animation */
-.social a:hover {
-  transform: translateY(-4px) scale(1.05);
-  background: linear-gradient(135deg, #6610f2, #0d6efd);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
-}
-
-/* Mobile optimization */
-@media (max-width: 768px) {
-  .social a {
-    width: 40px;
-    height: 40px;
-    font-size: 16px;
-  }/* Footer overall */
-footer {
-  background: #f8f9fa; /* light background for contrast */
-  padding: 25px 15px;
-  text-align: center;
-  border-top: 1px solid #ddd;
-}
-
-/* Bottom navigation links */
-.bottom-nav {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 15px; /* vertical gap from social icons */
-  gap: 20px;           /* horizontal gap between links */
-}
-
-.bottom-nav a {
-  display: inline-block;
-  padding: 8px 15px;
-  background: #ffffff;  /* clean card-like background for links */
-  border-radius: 8px;
-  color: #333;          /* text color */
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.bottom-nav a:hover {
-  background: #0d6efd;  /* hover background */
-  color: #fff;           /* hover text color */
-  transform: translateY(-2px);
-}
-
-/* Social icons */
-.social {
-  display: flex;
-  justify-content: center;
-  gap: 18px; /* horizontal spacing */
-  margin-top: 20px; /* vertical gap from nav links */
-}
-
-.social a {
-  font-size: 22px;
-  color: #333;
-  transition: transform 0.3s, color 0.3s;
-}
-
-.social a:hover {
-  color: #0d6efd;
-  transform: translateY(-3px);
-}/* Footer Styling */
-footer {
-  background: #000080;
-  color: #fff;
-  padding: 20px 15px;
-  text-align: center;
-}
-
-/* Footer navigation links */
-.footer-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 20px;
-}
-
-.footer-nav a {
-  flex: 1;
-  text-align: center;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 8px 4px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  font-size: 14px;
-}
-
-.footer-nav a:hover,
-.footer-nav a.active {
-  background: #D4AF37;
-  color: #000080;
-}
-
-/* Footer Social Icons */
-.footer-social {
-  display: flex;
-  justify-content: center;
-  gap: 25px;  /* horizontal spacing between icons */
-}
-
-.footer-social a {
-  color: #ffffff;
-  font-size: 22px;
-  transition: all 0.3s ease;
-}
-
-.footer-social a:hover {
-  color: #0d6efd;
-  transform: translateY(-4px);
-}/* Footer Links */
-footer p a,
-footer a {
-    color: #ffffff !important;
-    text-decoration: none;
-}
-
-footer p a:hover,
-footer a:hover {
-    color: #0d6efd !important;
-}
-.testimonials h2{
-    color: #1e293b;   /* Dark Blue */
+/* =========================================================
+   TESTIMONIALS
+========================================================= */
+.testimonials h2 {
+    color: #1e293b;
     text-align: center;
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 25px;
 }
-}.faq{
-    max-width:1100px;
-    margin:40px auto;
-    padding:20px;
-}
 
-.faq h2{
-    text-align:center;
-    color:#ffffff;
-    margin-bottom:25px;
-    font-size:32px;
-}
-
-.faq-item{
-    background:#ffffff;
-    padding:20px;
-    border-radius:12px;
-    margin-bottom:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
-
-.faq-item h3{
-    color:#0d6efd;
-    margin-bottom:10px;
-}
-
-.faq-item p{
-    color:#555;
-    line-height:1.7;
-}.faq h2 {
-    color: #b08d57; /* gold luxury tone */
-}
 .testimonials {
     text-align: center;
 }
@@ -550,79 +474,74 @@ footer a:hover {
 .testimonial-card h3 {
     text-align: center;
 }
+
 .testimonial-card p {
     text-align: center;
     max-width: 600px;
     margin: 0 auto;
-}.site-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 20px;
-}
-.site-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
 }
 
-.pay-btn{
-    background: #D4AF37;
-    color: #ffffff !important;
-    text-decoration: none !important;
-    padding: 10px 18px;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 16px;
-    display: inline-block;
-    border: none;
-    transition: 0.3s;
+/* =========================================================
+   FAQ
+========================================================= */
+.faq {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
 }
 
-.pay-btn:link,
-.pay-btn:visited,
-.pay-btn:hover,
-.pay-btn:active{
-    color: #ffffff !important;
-    text-decoration: none !important;
+.faq h2 {
+    text-align: center;
+    color: #b08d57;
+    margin-bottom: 25px;
+    font-size: 32px;
 }
 
-.pay-btn:hover{
-    background: #c89f2d;
-}#binance,
-#okx{
-    display:block;
-    width:100%;
-    word-break:break-all;
-    overflow-wrap:break-word;
-    white-space:normal;
-    font-size:15px;
-    line-height:1.6;
-    margin:10px 0;
-}.exchange-address,
-.wallet-address{
-    display:block;
-    width:100%;
-    word-break:break-all;
-    overflow-wrap:anywhere;
-    white-space:normal;
-    font-size:15px;
-    line-height:1.6;
-}.card{
-    overflow:hidden;
+.faq-item {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
 }
 
+.faq-item h3 {
+    color: #0d6efd;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   PAYMENT / WALLET ADDRESS BLOCKS
+========================================================= */
+.card {
+    overflow: hidden;
+}
+
+#binance,
+#okx,
 .exchange-address,
-.wallet-address{
-    display:block;
-    width:100%;
-    max-width:100%;
-    word-break:break-all;
-    overflow-wrap:anywhere;
-    white-space:normal;
-    box-sizing:border-box;
-}.services-nav {
+.wallet-address {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    word-break: break-all;
+    overflow-wrap: anywhere;
+    white-space: normal;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   SERVICES JUMP-NAV (Portfolio/Services sticky bar)
+========================================================= */
+.services-nav {
   position: sticky;
   top: 0;
   z-index: 999;
@@ -655,18 +574,17 @@ footer a:hover {
   color: #000080;
 }
 
-/* Smooth scroll for whole page */
 html {
   scroll-behavior: smooth;
 }
 
-/* Prevent section hiding behind sticky nav when jumping */
 .services-section {
   scroll-margin-top: 70px;
-}/* ===========================
-   Blog / Services & Insights
-=========================== */
+}
 
+/* =========================================================
+   BLOG / SERVICES & INSIGHTS
+========================================================= */
 .blog-services {
     padding: 70px 20px;
     background: #f8f9fc;
@@ -721,7 +639,12 @@ html {
     color: #f0e6c8;
     font-size: 15px;
     line-height: 1.6;
-}.coming-soon {
+}
+
+/* =========================================================
+   "COMING SOON" (Video page)
+========================================================= */
+.coming-soon {
     text-align: center;
     padding: 40px 20px;
 }
