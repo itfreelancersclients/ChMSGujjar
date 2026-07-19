@@ -3,37 +3,187 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us</title>
+<title>Contact Us | IT Freelancers Clients</title>
 
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+  /* ===== Contact Page — Navy/Gold Theme ===== */
+  .contact-hero {
+    background: #000080;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 0 0 16px 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  .contact-hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: radial-gradient(circle at 30% 20%, rgba(212,175,55,0.25), transparent 60%);
+  }
+  .contact-hero h1 {
+    position: relative;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+    color: #D4AF37;
+    margin: 0 0 14px 0;
+  }
+  .contact-hero p {
+    position: relative;
+    font-size: clamp(0.95rem, 3vw, 1.15rem);
+    max-width: 600px;
+    margin: 0 auto;
+    color: #f0f0f5;
+  }
+
+  .contact-cards {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+
+  .contact-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-top: 3px solid #D4AF37;
+    border-radius: 12px;
+    padding: 28px 22px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .contact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  }
+
+  .contact-card .icon-circle {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 16px auto;
+    border-radius: 50%;
+    background: #000080;
+    color: #D4AF37;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+  }
+
+  .contact-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: #000080;
+    margin: 0 0 10px 0;
+    font-size: 1.15rem;
+  }
+
+  .contact-card p {
+    color: #444;
+    font-size: 0.95rem;
+    margin: 0 0 14px 0;
+    line-height: 1.5;
+  }
+
+  .contact-card a.contact-link {
+    display: inline-block;
+    background: #000080;
+    color: #D4AF37;
+    padding: 9px 20px;
+    border-radius: 24px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .contact-card a.contact-link:hover {
+    background: #D4AF37;
+    color: #000080;
+  }
+
+  .contact-card .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 6px;
+  }
+  .contact-card .social-icons a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #000080;
+    color: #D4AF37;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .contact-card .social-icons a:hover {
+    background: #D4AF37;
+    color: #000080;
+  }
+
+  .contact-note {
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+    text-align: center;
+    color: #555;
+    font-size: 0.95rem;
+  }
+</style>
+
 </head>
 
 <body>
 
-<section class="page">
+<!-- ---------------- Hero Section ---------------- -->
+<section class="contact-hero">
+  <h1>Contact Us</h1>
+  <p>Need a Website, Graphic Design, SEO, Video Editing, or Digital Marketing service? Reach out and let's discuss your project.</p>
+</section>
 
-<h1>Contact Us</h1>
+<!-- ---------------- Contact Cards ---------------- -->
+<section class="contact-cards">
 
-<p>Need a Website, Graphic Design, SEO, Video Editing or Digital Marketing service?</p>
+  <div class="contact-card">
+    <div class="icon-circle"><i class="fab fa-whatsapp"></i></div>
+    <h3>WhatsApp</h3>
+    <p>Message us directly for a quick response about your project.</p>
+    <a class="contact-link" href="https://wa.me/923483679122" target="_blank">Chat on WhatsApp</a>
+  </div>
 
-<h3>WhatsApp</h3>
+  <div class="contact-card">
+    <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+    <h3>Email</h3>
+    <p>Send us your project details and requirements anytime.</p>
+    <a class="contact-link" href="mailto:chmsgujjar122@outlook.com">chmsgujjar122@outlook.com</a>
+  </div>
 
-<p>
-<a href="https://wa.me/923483679122" target="_blank">
-Chat on WhatsApp
-</a>
-</p>
-
-<h3>Email</h3>
-
-<p>chmsgujjar122@outlook.com</p>
-
-<h3>Social Media</h3>
-
-<p>Follow us on Facebook, Instagram, LinkedIn and YouTube.</p>
+  <div class="contact-card">
+    <div class="icon-circle"><i class="fas fa-share-alt"></i></div>
+    <h3>Social Media</h3>
+    <p>Follow us for updates, portfolio highlights, and more.</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/1CiJckywCx/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/itfreelancersclients?igsh=eGY2b2x2emI4cG9t" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/groups/16477055" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://youtube.com/@itfreelancersclients?si=7iksemhWlEDjRsS4" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
 
 </section>
+
+<p class="contact-note">We typically respond within 24 hours. For urgent inquiries, WhatsApp is the fastest way to reach us.</p>
 
 <footer>
 
@@ -58,6 +208,8 @@ Chat on WhatsApp
 <a href="contact.html">Contact</a>
 
 </footer>
+
+<script src="ifc-chatbot.js" defer></script>
 
 </body>
 </html>
