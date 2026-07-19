@@ -140,6 +140,16 @@
     color: #555;
     font-size: 0.95rem;
   }
+
+  /* Force single-column stacking on smaller screens to prevent overflow/cut-off */
+  @media (max-width: 700px) {
+    .contact-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+  body {
+    overflow-x: hidden;
+  }
 </style>
 
 </head>
