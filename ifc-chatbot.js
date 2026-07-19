@@ -191,7 +191,7 @@
     { keys: ["international clients","work with clients abroad","overseas clients","global clients"], reply: "Yes, we regularly work with international clients. All communication, project management, and delivery are handled remotely and efficiently across time zones." },
 
     // ---------- SERVICES OVERVIEW ----------
-    { keys: ["what services do you offer","your services","list of services","services you provide","what do you do"], reply: "We offer 10 core services:\n1. Freelancing\n2. Graphic Design\n3. Video Editing\n4. SEO\n5. Digital Marketing\n6. Affiliate Marketing\n7. Virtual Assistant\n8. E-commerce Management\n9. Communication & Soft Skills Training\n10. Web & App Development\n\nWhich one would you like to know more about?" },
+    { keys: ["what services do you offer","your services","our services","list of services","services you provide","what do you do","services","what do you offer"], reply: "We offer 10 core services:\n1. Freelancing\n2. Graphic Design\n3. Video Editing\n4. SEO\n5. Digital Marketing\n6. Affiliate Marketing\n7. Virtual Assistant\n8. E-commerce Management\n9. Communication & Soft Skills Training\n10. Web & App Development\n\nWhich one would you like to know more about?" },
 
     // ---------- FREELANCING ----------
     { keys: ["freelancing","freelance service","hire a freelancer"], reply: "Our Freelancing service connects you with skilled professionals for a wide range of tasks — from design and writing to development — on a project or ongoing basis." },
