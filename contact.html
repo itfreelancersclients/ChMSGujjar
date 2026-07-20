@@ -9,6 +9,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
+  /* Universal box-sizing fix — prevents padding/border from pushing
+     elements wider than their allotted space (fixes horizontal overflow) */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
   /* ===== Contact Page — Navy/Gold Theme ===== */
   .contact-hero {
     background: #000080;

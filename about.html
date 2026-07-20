@@ -18,6 +18,12 @@
 </script>
 
 <style>
+  /* Universal box-sizing fix — prevents padding/border from pushing
+     elements wider than their allotted space (fixes horizontal overflow) */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
   /* ===== About Page — Navy/Gold Theme ===== */
   .about-hero {
     background: #000080;
