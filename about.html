@@ -16,26 +16,156 @@
 
   gtag('config', 'G-4Z82MS0WBN');
 </script>
+
+<style>
+  /* ===== About Page — Navy/Gold Theme ===== */
+  .about-hero {
+    background: #000080;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 0 0 16px 16px;
+    position: relative;
+  }
+  .about-hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border-radius: 0 0 16px 16px;
+    background: radial-gradient(circle at 30% 20%, rgba(212,175,55,0.25), transparent 60%);
+  }
+  .about-hero h1 {
+    position: relative;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+    color: #D4AF37;
+    margin: 0 0 14px 0;
+  }
+  .about-hero p {
+    position: relative;
+    font-size: clamp(0.95rem, 3vw, 1.15rem);
+    max-width: 650px;
+    margin: 0 auto;
+    color: #f0f0f5;
+  }
+
+  .about-content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  .about-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-top: 3px solid #D4AF37;
+    border-radius: 12px;
+    padding: 26px 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  }
+
+  .about-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: #000080;
+    margin: 0 0 12px 0;
+    font-size: 1.25rem;
+  }
+
+  .about-card p {
+    color: #444;
+    font-size: 0.98rem;
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    margin-top: 14px;
+  }
+
+  .service-chip {
+    background: #f7f5ee;
+    border: 1px solid #D4AF37;
+    color: #000080;
+    border-radius: 20px;
+    padding: 10px 14px;
+    text-align: center;
+    font-size: 0.88rem;
+    font-weight: 600;
+  }
+
+  .clients-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 14px;
+  }
+
+  .client-badge {
+    background: #000080;
+    color: #D4AF37;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+</style>
+
 </head>
-<script src="ifc-chatbot.js" defer></script>
 <body>
-<section class="page">
-<h1>About Our Digital Agency</h1>
 
-<p>
-IT Freelancers Clients is a professional digital agency helping businesses grow online
-with modern strategies and smart execution.
-</p>
+<!-- ---------------- Hero Section ---------------- -->
+<section class="about-hero">
+  <h1>About Our Digital Agency</h1>
+  <p>IT Freelancers Clients is a professional digital agency helping businesses grow online with modern strategies and smart execution.</p>
+</section>
 
-<p>
-We provide Web Development, SEO, Graphic Design, Video Editing, Digital Marketing,
-Virtual Assistant and E-commerce Management services.
-</p>
+<!-- ---------------- About Content ---------------- -->
+<section class="about-content">
 
-<p>
-We proudly serve clients from <strong>USA, UK, Australia, Italy and Canada</strong>
-with a focus on long-term partnerships and real results — not fake promises.
-</p>
+  <div class="about-card">
+    <h3>What We Do</h3>
+    <p>We provide a complete range of digital services designed to help businesses build a strong, effective online presence:</p>
+    <div class="services-grid">
+      <div class="service-chip">Web Development</div>
+      <div class="service-chip">SEO</div>
+      <div class="service-chip">Graphic Design</div>
+      <div class="service-chip">Video Editing</div>
+      <div class="service-chip">Digital Marketing</div>
+      <div class="service-chip">Virtual Assistant</div>
+      <div class="service-chip">E-commerce Management</div>
+      <div class="service-chip">Affiliate Marketing</div>
+      <div class="service-chip">Communication & Soft Skills</div>
+      <div class="service-chip">Freelancing</div>
+    </div>
+  </div>
+
+  <div class="about-card">
+    <h3>Who We Work With</h3>
+    <p>We proudly serve clients internationally, with a focus on long-term partnerships and real results — not fake promises.</p>
+    <div class="clients-row">
+      <span class="client-badge">🇺🇸 USA</span>
+      <span class="client-badge">🇬🇧 UK</span>
+      <span class="client-badge">🇦🇺 Australia</span>
+      <span class="client-badge">🇮🇹 Italy</span>
+      <span class="client-badge">🇨🇦 Canada</span>
+    </div>
+  </div>
+
+  <div class="about-card">
+    <h3>Our Approach</h3>
+    <p>We focus on quality work, clear communication, and measurable outcomes. Every project is treated as a partnership — we take the time to understand your goals before recommending a solution, so what we deliver actually fits your business.</p>
+  </div>
+
 </section>
 
 <footer>
@@ -59,5 +189,8 @@ with a focus on long-term partnerships and real results — not fake promises.
 <a href="privacy.html">Privacy Policy</a> |
 <a href="contact.html">Contact</a>
 </footer>
+
+<script src="ifc-chatbot.js" defer></script>
+
 </body>
 </html>

@@ -3,36 +3,126 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy</title>
+<title>Privacy Policy | IT Freelancers Clients</title>
 
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+  /* ===== Privacy Policy Page — Navy/Gold Theme ===== */
+  .privacy-hero {
+    background: #000080;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 0 0 16px 16px;
+    position: relative;
+  }
+  .privacy-hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border-radius: 0 0 16px 16px;
+    background: radial-gradient(circle at 30% 20%, rgba(212,175,55,0.25), transparent 60%);
+  }
+  .privacy-hero h1 {
+    position: relative;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+    color: #D4AF37;
+    margin: 0 0 14px 0;
+  }
+  .privacy-hero p {
+    position: relative;
+    font-size: clamp(0.95rem, 3vw, 1.1rem);
+    max-width: 600px;
+    margin: 0 auto;
+    color: #f0f0f5;
+  }
+
+  .privacy-content {
+    max-width: 720px;
+    margin: 40px auto;
+    padding: 0 20px 20px 20px;
+  }
+
+  .privacy-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-left: 4px solid #D4AF37;
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+  }
+
+  .privacy-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: #000080;
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+  }
+
+  .privacy-card p {
+    color: #444;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .privacy-updated {
+    text-align: center;
+    color: #888;
+    font-size: 0.85rem;
+    margin-top: 10px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+</style>
+
 </head>
 
 <body>
 
-<section class="page">
-<h1>Privacy Policy</h1>
+<!-- ---------------- Hero Section ---------------- -->
+<section class="privacy-hero">
+  <h1>Privacy Policy</h1>
+  <p>How IT Freelancers Clients collects, uses, and protects your information.</p>
+</section>
 
-<p>
-IT Freelancers Clients respects your privacy.
-</p>
+<!-- ---------------- Policy Content ---------------- -->
+<section class="privacy-content">
 
-<p>
-We do not sell or share your personal information with third parties.
-</p>
+  <div class="privacy-card">
+    <h3>Our Commitment</h3>
+    <p>IT Freelancers Clients respects your privacy. We are committed to protecting any personal information you share with us.</p>
+  </div>
 
-<p>
-Our website may use Google Analytics to improve user experience and understand website traffic.
-</p>
+  <div class="privacy-card">
+    <h3>How We Use Your Information</h3>
+    <p>We do not sell or share your personal information with third parties. Any information you provide is used solely to respond to your inquiries and deliver our services.</p>
+  </div>
 
-<p>
-If you contact us through WhatsApp or social media, your information will only be used to respond to your inquiry.
-</p>
+  <div class="privacy-card">
+    <h3>Website Analytics</h3>
+    <p>Our website may use Google Analytics to improve user experience and understand website traffic. This helps us identify which content is most useful to visitors.</p>
+  </div>
 
-<p>
-By using this website, you agree to this Privacy Policy.
-</p>
+  <div class="privacy-card">
+    <h3>Contact & Social Media</h3>
+    <p>If you contact us through WhatsApp or social media, your information will only be used to respond to your inquiry and will not be shared elsewhere.</p>
+  </div>
+
+  <div class="privacy-card">
+    <h3>Your Agreement</h3>
+    <p>By using this website, you agree to this Privacy Policy. We may update this policy from time to time to reflect changes in our practices.</p>
+  </div>
+
+  <p class="privacy-updated">Last updated: July 2026</p>
+
 </section>
 
 <footer>
@@ -57,6 +147,8 @@ By using this website, you agree to this Privacy Policy.
 <a href="contact.html">Contact</a>
 
 </footer>
+
+<script src="ifc-chatbot.js" defer></script>
 
 </body>
 </html>
