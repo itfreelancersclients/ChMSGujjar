@@ -124,6 +124,14 @@
   body {
     overflow-x: hidden;
   }
+
+  /* Force single-column grid on small screens — the 2-column grid
+     was overflowing by a few pixels on narrower phones */
+  @media (max-width: 480px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>
 
 </head>
