@@ -7,20 +7,154 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 <link rel="canonical" href="https://itfreelancersclients.github.io/ChMSGujjar/video.html">
+
+<style>
+  /* Universal box-sizing fix — prevents padding/border from pushing
+     elements wider than their allotted space (fixes horizontal overflow) */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* ===== Video (Coming Soon) Page — Navy/Gold Theme ===== */
+  .video-hero {
+    background: #000080;
+    color: #fff;
+    text-align: center;
+    padding: 70px 20px;
+    border-radius: 0 0 16px 16px;
+    position: relative;
+  }
+  .video-hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border-radius: 0 0 16px 16px;
+    background: radial-gradient(circle at 30% 20%, rgba(212,175,55,0.25), transparent 60%);
+  }
+
+  .coming-soon-icon {
+    position: relative;
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+    color: #D4AF37;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .video-hero h1 {
+    position: relative;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 6vw, 2.6rem);
+    color: #D4AF37;
+    margin: 0 0 18px 0;
+  }
+
+  .video-hero hr {
+    position: relative;
+    width: 80px;
+    border: none;
+    border-top: 2px solid #D4AF37;
+    margin: 0 auto 20px auto;
+  }
+
+  .video-hero p {
+    position: relative;
+    font-size: clamp(0.95rem, 3vw, 1.1rem);
+    max-width: 600px;
+    margin: 0 auto;
+    color: #f0f0f5;
+    line-height: 1.6;
+  }
+
+  .video-topics {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .video-topics h3 {
+    font-family: 'Playfair Display', serif;
+    color: #000080;
+    margin-bottom: 16px;
+    font-size: 1.15rem;
+  }
+
+  .topics-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .topic-chip {
+    background: #f7f5ee;
+    border: 1px solid #D4AF37;
+    color: #000080;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .video-notify {
+    max-width: 500px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .video-notify a {
+    display: inline-block;
+    background: #000080;
+    color: #D4AF37;
+    padding: 12px 28px;
+    border-radius: 24px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .video-notify a:hover {
+    background: #D4AF37;
+    color: #000080;
+  }
+</style>
+
 </head>
-<script src="ifc-chatbot.js" defer></script>
 <body>
-<section class="page">
-    <div class="coming-soon">
-        <i class="fas fa-video coming-soon-icon"></i>
-        <h1>Videos Coming Soon</h1>
-        <hr>
-        <p>
-            We are preparing high-quality videos about Graphic Design,
-            Video Editing, SEO, Digital Marketing, Web Development,
-            Freelancing, AI Tools and much more.
-        </p>
-    </div>
+
+<!-- ---------------- Hero / Coming Soon Section ---------------- -->
+<section class="video-hero">
+  <i class="fas fa-video coming-soon-icon"></i>
+  <h1>Videos Coming Soon</h1>
+  <hr>
+  <p>We are preparing high-quality videos about Graphic Design, Video Editing, SEO, Digital Marketing, Web Development, Freelancing, AI Tools, and much more.</p>
+</section>
+
+<!-- ---------------- Upcoming Topics ---------------- -->
+<section class="video-topics">
+  <h3>Topics You Can Expect</h3>
+  <div class="topics-row">
+    <span class="topic-chip">Graphic Design</span>
+    <span class="topic-chip">Video Editing</span>
+    <span class="topic-chip">SEO</span>
+    <span class="topic-chip">Digital Marketing</span>
+    <span class="topic-chip">Web Development</span>
+    <span class="topic-chip">Freelancing</span>
+    <span class="topic-chip">AI Tools</span>
+  </div>
+</section>
+
+<!-- ---------------- Notify / CTA ---------------- -->
+<section class="video-notify">
+  <a href="contact.html">Get Notified When We Launch</a>
 </section>
 
 <footer>
@@ -42,5 +176,8 @@
   <a href="privacy.html">Privacy Policy</a> |
   <a href="contact.html">Contact</a>
 </footer>
+
+<script src="ifc-chatbot.js" defer></script>
+
 </body>
 </html>
