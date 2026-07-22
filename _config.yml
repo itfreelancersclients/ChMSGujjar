@@ -1,7 +1,8 @@
 # Site settings
 title: "IT Freelancers & Clients"
 description: "Freelancing Services and IT Projects"
-url: "https://itfreelancersclients.github.io/ChMSGujjar"
+url: "https://itfreelancersclients.github.io"
+baseurl: "/ChMSGujjar"
 
 # Plugins
 plugins:
