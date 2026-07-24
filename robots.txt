@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://itfreelancersclients.github.io/ChMSGujjar/sitemap.xml
