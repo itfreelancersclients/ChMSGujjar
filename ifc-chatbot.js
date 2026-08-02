@@ -424,7 +424,7 @@
     if (bestMatch && bestScore > 0) {
       return bestMatch.reply;
     }
-    return "I'm sorry, I couldn't fully understand your question. Please rephrase it or contact our team through the Contact page for personalized assistance.";
+    return null; // no KB match — caller decides what to do next (e.g. ask Gemini AI)
   }
 
   // ================= 5. CHAT HISTORY (localStorage) =================
@@ -510,7 +510,7 @@
     messages.scrollTop = messages.scrollHeight;
   }
 
-  function ifcRespond(userText) {
+  async function ifcRespond(userText) {
     const messages = document.getElementById('ifc-chat-messages');
     const typing = document.createElement('div');
     typing.className = 'ifc-typing';
@@ -518,9 +518,35 @@
     messages.appendChild(typing);
     messages.scrollTop = messages.scrollHeight;
 
+    // 1. Try the fast, free knowledge-base match first (instant, no API call)
+    const kbReply = ifcFindReply(userText);
+
+    if (kbReply) {
+      setTimeout(() => {
+        typing.remove();
+        ifcAddBotMessage(kbReply);
+      }, 600);
+      return;
+    }
+
+    // 2. No KB match — fall back to Gemini AI (via ifc-chatbot-gemini-addon.js)
+    //    if that add-on script is loaded on the page.
+    if (typeof window.ifcAskGemini === 'function') {
+      try {
+        const aiReply = await window.ifcAskGemini(userText);
+        typing.remove();
+        ifcAddBotMessage(aiReply);
+      } catch (e) {
+        typing.remove();
+        ifcAddBotMessage("I'm sorry, I couldn't fully understand your question. Please rephrase it or contact our team through the Contact page for personalized assistance.");
+      }
+      return;
+    }
+
+    // 3. Add-on not loaded — same safe default as before
     setTimeout(() => {
       typing.remove();
-      ifcAddBotMessage(ifcFindReply(userText));
+      ifcAddBotMessage("I'm sorry, I couldn't fully understand your question. Please rephrase it or contact our team through the Contact page for personalized assistance.");
     }, 600);
   }
 
