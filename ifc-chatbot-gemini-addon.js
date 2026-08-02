@@ -44,7 +44,7 @@
 (function () {
 
   // PASTE YOUR CLOUDFLARE WORKER URL HERE (from Step 7 of the Worker setup):
-  "https://ifc-chat-proxy.shadapunjabi75.workers.dev"
+  const WORKER_URL = "https://ifc-chat-proxy.shadapunjabi75.workers.dev";
 
   /**
    * Calls Gemini AI (through the Cloudflare Worker) with the user's message.
