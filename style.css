@@ -293,20 +293,20 @@ p{color:var(--slate);}
 .video-notify{max-width:500px;margin:0 auto 60px;padding:0 32px;text-align:center;position:relative;z-index:2;}
 
 /* ===================== BLOG ARTICLE SERIES ===================== */
-.freelance-poster, .video-poster, .seo-poster{
+.freelance-poster, .video-poster, .seo-poster, .va-poster, .am-poster{
   position:relative;text-align:center;padding:80px 32px 60px;overflow:hidden;
   border-radius:24px;margin:0 auto 50px;max-width:1240px;
   background:linear-gradient(150deg, rgba(15,26,65,0.9), rgba(6,11,30,0.85));
   border:1px solid var(--line);
 }
-.freelance-poster::before, .video-poster::before, .seo-poster::before{
+.freelance-poster::before, .video-poster::before, .seo-poster::before, .va-poster::before, .am-poster::before{
   content:"";position:absolute;top:-200px;left:50%;transform:translateX(-50%);
   width:700px;height:700px;
   background:radial-gradient(circle, rgba(201,162,39,0.12) 0%, transparent 70%);
   pointer-events:none;
 }
-.freelance-poster h1, .video-poster h1, .seo-poster h1{position:relative;font-size:clamp(30px,5.5vw,46px);margin-bottom:14px;}
-.freelance-poster p, .video-poster p, .seo-poster p{position:relative;font-size:16.5px;color:var(--slate);margin-bottom:26px;}
+.freelance-poster h1, .video-poster h1, .seo-poster h1, .va-poster h1, .am-poster h1{position:relative;font-size:clamp(30px,5.5vw,46px);margin-bottom:14px;}
+.freelance-poster p, .video-poster p, .seo-poster p, .va-poster p, .am-poster p{position:relative;font-size:16.5px;color:var(--slate);margin-bottom:26px;}
 .btn-poster{
   position:relative;display:inline-block;
   background:linear-gradient(120deg, var(--champagne), var(--gold));
