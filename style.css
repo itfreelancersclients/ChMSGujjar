@@ -199,10 +199,58 @@ html.ifc-loaded body{opacity:1;transition:opacity .5s ease;}
 }
 .front-poster .poster-img{width:100%;height:100%;object-fit:cover;display:block;}
 
+/* ===================== NETWORK CONSTELLATION HERO VISUAL ===================== */
+.constellation-box{
+  position:relative;z-index:2;order:2;height:460px;
+  border:1px solid var(--line);border-radius:24px;
+  background:linear-gradient(150deg, rgba(15,26,65,0.9), rgba(6,11,30,0.85));
+  overflow:hidden;
+  box-shadow:0 25px 70px rgba(0,0,0,0.4);
+}
+.constellation-box::before{
+  content:"";position:absolute;inset:26px;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(201,162,39,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,162,39,0.06) 1px, transparent 1px);
+  background-size:38px 38px;
+  mask-image:linear-gradient(to bottom, black, transparent);
+}
+.constellation-label{
+  position:absolute;top:22px;left:24px;z-index:3;
+  font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.8px;
+  color:var(--slate-dim);text-transform:uppercase;
+}
+#constellation{width:100%;height:100%;display:block;position:relative;z-index:1;}
+.network-hub{
+  position:absolute;z-index:3;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:112px;height:112px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  border:1px solid var(--gold);background:rgba(7,12,31,0.9);
+  box-shadow:0 0 60px rgba(201,162,39,0.15);
+}
+.network-hub b{font-family:'Playfair Display',serif;font-size:20px;color:var(--champagne);display:block;}
+.network-hub span{font-size:7.5px;letter-spacing:1px;color:var(--slate);}
+.node-tag{
+  position:absolute;z-index:3;padding:7px 12px;
+  border:1px solid var(--line);background:rgba(6,11,31,0.8);
+  border-radius:999px;font-size:10.5px;color:var(--slate);
+  font-family:'IBM Plex Mono',monospace;letter-spacing:0.3px;
+}
+.tag1{left:7%;top:22%;}
+.tag2{left:10%;bottom:18%;}
+.tag3{right:7%;top:22%;}
+.tag4{right:9%;bottom:17%;}
+
 @media(max-width:900px){
+  .constellation-box{order:0;height:320px;}
   .hero-banner{grid-template-columns:1fr;padding:50px 20px 40px;}
   .hero-content{order:1;text-align:left;}
-  .front-poster{order:0;max-height:280px;}
+}
+@media(max-width:560px){
+  .constellation-box{height:280px;}
+  .node-tag{font-size:9px;padding:6px 9px;}
+  .network-hub{width:86px;height:86px;}
+  .network-hub b{font-size:15px;}
 }
 
 /* ===================== SERVICES ===================== */
