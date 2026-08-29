@@ -20,6 +20,21 @@
 html{scroll-behavior:smooth;}
 ::selection{background:var(--gold);color:var(--void-navy);}
 
+/* Custom scrollbar — premium sites never leave this at browser default */
+::-webkit-scrollbar{width:10px;}
+::-webkit-scrollbar-track{background:var(--void-navy);}
+::-webkit-scrollbar-thumb{background:rgba(201,162,39,0.35);border-radius:10px;}
+::-webkit-scrollbar-thumb:hover{background:var(--gold);}
+html{scrollbar-color:rgba(201,162,39,0.35) var(--void-navy);scrollbar-width:thin;}
+
+/* Scroll progress bar */
+.scroll-progress{
+  position:fixed;top:0;left:0;height:2px;width:0%;z-index:200;
+  background:linear-gradient(90deg, var(--gold), var(--champagne));
+  box-shadow:0 0 12px rgba(201,162,39,0.6);
+  transition:width .1s linear;
+}
+
 body{
   background:var(--void-navy);
   color:var(--ivory);
@@ -36,6 +51,11 @@ body::before{
     linear-gradient(90deg, rgba(201,162,39,0.045) 1px, transparent 1px);
   background-size:64px 64px;
   mask-image:radial-gradient(ellipse 80% 60% at 50% 0%, black 0%, transparent 75%);
+}
+/* Subtle film-grain — the texture that keeps a dark UI from looking flat/template-y */
+body::after{
+  content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:0.035;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:600;color:var(--ivory);letter-spacing:0.2px;}
 a{text-decoration:none;color:inherit;}
@@ -255,6 +275,8 @@ html.ifc-loaded body{opacity:1;transition:opacity .5s ease;}
 
 /* ===================== SERVICES ===================== */
 .services-section{padding:70px 0;max-width:1240px;margin:0 auto;padding-left:32px;padding-right:32px;position:relative;z-index:2;}
+.services-subsection{padding:18px 0;max-width:1240px;margin:0 auto;padding-left:32px;padding-right:32px;position:relative;z-index:2;}
+.services-subsection .services-title{font-size:22px;margin-bottom:22px;}
 .services-intro{
   max-width:820px;margin:0 auto 50px;text-align:center;
   background:linear-gradient(160deg, rgba(201,162,39,0.07), rgba(14,22,64,0.4));
@@ -307,19 +329,33 @@ html.ifc-loaded body{opacity:1;transition:opacity .5s ease;}
 .learn-btn:hover{border-color:var(--gold);color:var(--gold);}
 .start-btn{padding:10px 20px;font-size:12.5px;}
 
-/* ===================== TESTIMONIALS ===================== */
-.testimonials{
+/* ===================== WHY CHOOSE IFC ===================== */
+.why-ifc{
   padding:90px 32px;max-width:1240px;margin:0 auto;position:relative;z-index:2;
   text-align:center;
 }
-.testimonials h2{font-size:clamp(26px,3vw,34px);margin-bottom:36px;}
-.testimonial-card{
-  max-width:520px;margin:0 auto;
-  background:var(--panel-navy);border:1px solid var(--line);border-radius:var(--radius);
-  padding:40px 34px;
+.why-ifc h2{font-size:clamp(26px,3vw,36px);margin-bottom:16px;}
+.why-ifc-subtitle{
+  color:var(--slate);font-size:16px;max-width:620px;margin:0 auto 48px;
 }
-.testimonial-card h3{color:var(--gold);font-size:18px;margin-bottom:12px;}
-.testimonial-card p{font-size:14.5px;color:var(--slate);}
+.why-ifc-grid{
+  display:grid;grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
+  gap:18px;max-width:1100px;margin:0 auto;
+}
+.why-ifc-card{
+  background:rgba(14,22,64,0.55);backdrop-filter:blur(10px);
+  border:1px solid var(--line);border-radius:var(--radius);
+  padding:32px 24px;transition:.35s cubic-bezier(.2,.7,.3,1);
+  display:flex;flex-direction:column;align-items:center;gap:16px;
+}
+.why-ifc-card:hover{
+  border-color:rgba(201,162,39,0.5);transform:translateY(-6px);
+  background:linear-gradient(160deg, rgba(201,162,39,0.09), rgba(14,22,64,0.7) 60%);
+  box-shadow:0 20px 50px rgba(6,11,31,0.5), 0 0 0 1px rgba(201,162,39,0.15);
+}
+.why-ifc-icon{font-size:30px;}
+.why-ifc-card h3{font-size:16.5px;color:var(--ivory);line-height:1.4;}
+@media(max-width:560px){ .why-ifc-grid{grid-template-columns:1fr 1fr;gap:12px;} .why-ifc-card{padding:24px 16px;} }
 
 /* ===================== FAQ ===================== */
 .faq{max-width:800px;margin:0 auto;padding:90px 32px;position:relative;z-index:2;}

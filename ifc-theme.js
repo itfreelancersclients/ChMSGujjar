@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /* ---- Scroll reveal on common content blocks (staggered by position) ---- */
-  const revealSelectors = '.service-card, .services-title, .services-subtitle, .testimonial-card, .faq-item, .hero-content, .front-poster, .services-grid, .blog-card, .blog-services h1, .service-block, .video-hero h1, .video-hero p, .about-card, .privacy-card, .contact-card, .payment-card, .portfolio-item, .stat-strip .stat';
+  const revealSelectors = '.service-card, .services-title, .services-subtitle, .testimonial-card, .why-ifc-card, .faq-item, .hero-content, .front-poster, .services-grid, .blog-card, .blog-services h1, .service-block, .video-hero h1, .video-hero p, .about-card, .privacy-card, .contact-card, .payment-card, .portfolio-item, .stat-strip .stat';
   const revealEls = document.querySelectorAll(revealSelectors);
   revealEls.forEach(el => el.classList.add('reveal'));
 
