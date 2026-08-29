@@ -5,12 +5,22 @@
    FAQ accordion.
    ========================================================================== */
 
-/* Page fade-in — avoids flash of unstyled content before scripts/styles settle */
+/* Page fade-in — avoids flash of unstyled content before scripts/styles settle.
+   Reveals as soon as the DOM is parsed (fast, reliable) instead of waiting on
+   window.load (which blocks on every external resource — fonts/CDN icons —
+   and can hang or never fire on a slow/flaky mobile connection, leaving the
+   whole page invisible). A hard timeout is a second safety net regardless. */
 document.documentElement.classList.add('ifc-loading');
-window.addEventListener('load', function () {
+function ifcRevealPage() {
   document.documentElement.classList.remove('ifc-loading');
   document.documentElement.classList.add('ifc-loaded');
-});
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', ifcRevealPage);
+} else {
+  ifcRevealPage();
+}
+setTimeout(ifcRevealPage, 800); /* absolute safety net — page is never stuck blank */
 
 document.addEventListener("DOMContentLoaded", function () {
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -124,8 +134,16 @@ document.addEventListener("DOMContentLoaded", function () {
           io.unobserve(en.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.12, rootMargin: '150px 0px 0px 0px' });
     revealEls.forEach(el => io.observe(el));
+
+    /* Safety net: force-reveal anything still hidden after 2.5s. Covers edge
+       cases (element inside a temporarily zero-height/hidden ancestor, a
+       screenshot/automation tool that scrolls faster than the transition,
+       etc.) so content can never get stuck permanently invisible. */
+    setTimeout(() => {
+      revealEls.forEach(el => el.classList.add('in'));
+    }, 2500);
   } else {
     revealEls.forEach(el => el.classList.add('in'));
   }
