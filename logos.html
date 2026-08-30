@@ -7,6 +7,8 @@
 <meta name="description" content="Browse our portfolio of professional AI-assisted logo designs for startups and brands — geometric, wordmark, badge and icon-based logo concepts.">
 <link rel="canonical" href="https://itfreelancersclients.github.io/ChMSGujjar/logos.html">
 <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Logo Design Portfolio | IT Freelancers Clients">
@@ -18,18 +20,39 @@
 <meta name="twitter:title" content="Logo Design Portfolio | IT Freelancers Clients">
 <meta name="twitter:description" content="Browse our portfolio of professional AI-assisted logo designs for startups and brands — geometric, wordmark, badge and icon-based logo concepts.">
 <meta name="twitter:image" content="https://itfreelancersclients.github.io/ChMSGujjar/bannerblog1.png">
-<style>
-.logo-hero{background:#000080;padding:40px 20px;text-align:center;border-radius:0 0 20px 20px;}
-.logo-hero h1{color:#D4AF37;font-family:'Playfair Display',serif;margin-bottom:10px;}
-.logo-hero p{color:#fff;max-width:600px;margin:0 auto;}
-.logo-grid{display:grid;grid-template-columns:1fr;gap:20px;padding:30px 20px;max-width:700px;margin:0 auto;}
-.logo-card{border:1px solid #eee;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);background:#fff;}
-.logo-card img{width:100%;display:block;aspect-ratio:1/1;object-fit:contain;padding:20px;box-sizing:border-box;}
-.logo-back{text-align:center;padding:20px;}
-.logo-back a{color:#000080;font-weight:600;text-decoration:none;}
-</style>
 </head>
 <body>
+
+
+<header class="site-header">
+  <div class="logo">
+    <a href="index.html">
+      <img src="logo-horizontal.png" alt="IT Freelancers Clients Logo">
+    </a>
+  </div>
+  <nav class="main-nav">
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Insights</a>
+      <a href="video.html">Video</a>
+      <a href="portfolio.html" class="active">Portfolio</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="header-actions">
+      <a href="payment.html" class="pay-btn">💳 Pay</a>
+    </div>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu">☰</button>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Insights</a>
+    <a href="video.html">Video</a>
+    <a href="portfolio.html" class="active">Portfolio</a>
+    <a href="about.html">About</a>
+    <a href="payment.html">💳 Pay</a>
+    <a href="https://wa.me/923483679122?text=Hi,%20I%20want%20to%20know%20more%20about%20IFC%20services." class="mobile-cta">Chat on WhatsApp →</a>
+  </div>
+</header>
 
 <section class="logo-hero">
   <h1>Logo Design Portfolio</h1>
@@ -82,5 +105,6 @@
 </footer>
 
 <script src="ifc-chatbot.js" defer></script>
+<script src="ifc-theme.js" defer></script>
 </body>
 </html>
