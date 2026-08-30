@@ -5,22 +5,12 @@
    FAQ accordion.
    ========================================================================== */
 
-/* Page fade-in — avoids flash of unstyled content before scripts/styles settle.
-   Reveals as soon as the DOM is parsed (fast, reliable) instead of waiting on
-   window.load (which blocks on every external resource — fonts/CDN icons —
-   and can hang or never fire on a slow/flaky mobile connection, leaving the
-   whole page invisible). A hard timeout is a second safety net regardless. */
+/* Page fade-in — avoids flash of unstyled content before scripts/styles settle */
 document.documentElement.classList.add('ifc-loading');
-function ifcRevealPage() {
+window.addEventListener('load', function () {
   document.documentElement.classList.remove('ifc-loading');
   document.documentElement.classList.add('ifc-loaded');
-}
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', ifcRevealPage);
-} else {
-  ifcRevealPage();
-}
-setTimeout(ifcRevealPage, 800); /* absolute safety net — page is never stuck blank */
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -118,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /* ---- Scroll reveal on common content blocks (staggered by position) ---- */
-  const revealSelectors = '.service-card, .services-title, .services-subtitle, .testimonial-card, .why-ifc-card, .faq-item, .hero-content, .front-poster, .services-grid, .blog-card, .blog-services h1, .service-block, .video-hero h1, .video-hero p, .about-card, .privacy-card, .contact-card, .payment-card, .portfolio-item, .stat-strip .stat';
+  const revealSelectors = '.service-card, .services-title, .services-subtitle, .testimonial-card, .why-ifc-card, .faq-item, .hero-content, .front-poster, .services-grid, .blog-card, .blog-services h1, .service-block, .video-hero h1, .video-hero p, .about-card, .privacy-card, .contact-card, .payment-card, .portfolio-item, .stat-strip .stat, .thumb-card, .logo-card, .webui-card';
   const revealEls = document.querySelectorAll(revealSelectors);
   revealEls.forEach(el => el.classList.add('reveal'));
 
@@ -134,16 +124,8 @@ document.addEventListener("DOMContentLoaded", function () {
           io.unobserve(en.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: '150px 0px 0px 0px' });
+    }, { threshold: 0.12 });
     revealEls.forEach(el => io.observe(el));
-
-    /* Safety net: force-reveal anything still hidden after 2.5s. Covers edge
-       cases (element inside a temporarily zero-height/hidden ancestor, a
-       screenshot/automation tool that scrolls faster than the transition,
-       etc.) so content can never get stuck permanently invisible. */
-    setTimeout(() => {
-      revealEls.forEach(el => el.classList.add('in'));
-    }, 2500);
   } else {
     revealEls.forEach(el => el.classList.add('in'));
   }

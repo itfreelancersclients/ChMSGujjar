@@ -811,6 +811,48 @@ html.ifc-loaded body{opacity:1;transition:opacity .5s ease;}
 .blog-card h3{font-size:18.5px;margin-bottom:10px;}
 .blog-card p{font-size:14px;color:var(--slate);}
 
+/* ===================== PORTFOLIO DETAIL GALLERIES (thumbnails/logos/website-ui) ===================== */
+.thumb-hero, .logo-hero, .webui-hero{
+  position:relative;text-align:center;padding:90px 32px 50px;overflow:hidden;
+  max-width:1240px;margin:0 auto;
+}
+.thumb-hero::before, .logo-hero::before, .webui-hero::before{
+  content:"";position:absolute;top:-200px;left:50%;transform:translateX(-50%);
+  width:700px;height:700px;
+  background:radial-gradient(circle, rgba(201,162,39,0.12) 0%, transparent 70%);
+  pointer-events:none;
+}
+.thumb-hero h1, .logo-hero h1, .webui-hero h1{position:relative;font-size:clamp(28px,4.6vw,42px);margin-bottom:14px;}
+.thumb-hero p, .logo-hero p, .webui-hero p{position:relative;font-size:16px;max-width:600px;margin:0 auto;color:var(--slate);}
+
+.thumb-grid, .logo-grid, .webui-grid{
+  display:grid;grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+  gap:20px;padding:20px 32px 80px;max-width:1160px;margin:0 auto;
+}
+.thumb-card, .webui-card{
+  border-radius:16px;overflow:hidden;border:1px solid var(--line);
+  background:rgba(14,22,64,0.4);transition:.35s cubic-bezier(.2,.7,.3,1);
+}
+.thumb-card:hover, .webui-card:hover{
+  transform:translateY(-6px);border-color:rgba(201,162,39,0.5);
+  box-shadow:0 20px 50px rgba(6,11,31,0.5), 0 0 0 1px rgba(201,162,39,0.15);
+}
+.thumb-card img, .webui-card img{width:100%;display:block;object-fit:cover;}
+
+.logo-card{
+  border-radius:16px;overflow:hidden;border:1px solid var(--line);
+  background:#ffffff;transition:.35s cubic-bezier(.2,.7,.3,1);
+}
+.logo-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(6,11,31,0.5);}
+.logo-card img{width:100%;display:block;aspect-ratio:1/1;object-fit:contain;padding:20px;box-sizing:border-box;}
+
+.thumb-back, .logo-back, .webui-back{text-align:center;padding:0 32px 60px;}
+.thumb-back a, .logo-back a, .webui-back a{
+  color:var(--gold);font-weight:600;text-decoration:none;font-size:14.5px;
+  border-bottom:1px solid var(--line);padding-bottom:3px;transition:.25s;
+}
+.thumb-back a:hover, .logo-back a:hover, .webui-back a:hover{border-color:var(--gold);}
+
 /* ===================== FOOTER ===================== */
 footer{
   padding:60px 32px 30px;max-width:1240px;margin:0 auto;text-align:center;
