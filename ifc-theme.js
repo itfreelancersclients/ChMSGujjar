@@ -248,4 +248,45 @@ document.addEventListener("DOMContentLoaded", function () {
       drawConstellation(0);
     }
   }
+
+  /* ---- Business inquiry form (contact page only) ---- */
+  const inquiryForm = document.getElementById('inquiryForm');
+  if (inquiryForm) {
+    inquiryForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('inq-name').value.trim();
+      const company = document.getElementById('inq-company').value.trim();
+      const website = document.getElementById('inq-website').value.trim();
+      const service = document.getElementById('inq-service').value;
+      const budget = document.getElementById('inq-budget').value;
+      const timeline = document.getElementById('inq-timeline').value;
+      const description = document.getElementById('inq-description').value.trim();
+
+      const lines = [
+        'New project inquiry:',
+        '',
+        `Name: ${name}`,
+        company ? `Company: ${company}` : null,
+        website ? `Website: ${website}` : null,
+        `Service: ${service}`,
+        budget ? `Budget: ${budget}` : null,
+        timeline ? `Timeline: ${timeline}` : null,
+        '',
+        `Project description: ${description}`
+      ].filter(Boolean);
+
+      const messageText = lines.join('\n');
+      const submitter = e.submitter && e.submitter.id;
+
+      if (submitter === 'inquirySendEmail') {
+        const subject = encodeURIComponent(`Project Inquiry from ${name}`);
+        const body = encodeURIComponent(messageText);
+        window.location.href = `mailto:chmsgujjar122@outlook.com?subject=${subject}&body=${body}`;
+      } else {
+        const waText = encodeURIComponent(messageText);
+        window.open(`https://wa.me/923483679122?text=${waText}`, '_blank');
+      }
+    });
+  }
 });

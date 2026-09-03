@@ -97,6 +97,87 @@
 
 <p class="contact-note">We typically respond within 24 hours. For urgent inquiries, WhatsApp is the fastest way to reach us.</p>
 
+<section class="inquiry-section">
+  <h2>Start a Project</h2>
+  <p class="inquiry-subtitle">Tell us about your project and we'll get back to you within 24 hours.</p>
+
+  <form class="inquiry-form" id="inquiryForm">
+    <div class="inquiry-row">
+      <div class="inquiry-field">
+        <label for="inq-name">Name *</label>
+        <input type="text" id="inq-name" required>
+      </div>
+      <div class="inquiry-field">
+        <label for="inq-company">Company</label>
+        <input type="text" id="inq-company">
+      </div>
+    </div>
+
+    <div class="inquiry-row">
+      <div class="inquiry-field">
+        <label for="inq-website">Website</label>
+        <input type="text" id="inq-website" placeholder="https://">
+      </div>
+      <div class="inquiry-field">
+        <label for="inq-service">Service Needed *</label>
+        <select id="inq-service" required>
+          <option value="">Select a service</option>
+          <option>Freelancing</option>
+          <option>Web &amp; App Development</option>
+          <option>Graphic Design</option>
+          <option>Video Editing</option>
+          <option>SEO</option>
+          <option>Digital Marketing</option>
+          <option>Affiliate Marketing</option>
+          <option>Virtual Assistant</option>
+          <option>E-commerce Management</option>
+          <option>Communication &amp; Soft Skills Training</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="inquiry-row">
+      <div class="inquiry-field">
+        <label for="inq-budget">Budget Range</label>
+        <select id="inq-budget">
+          <option value="">Select a range</option>
+          <option>Under $500</option>
+          <option>$500 – $1,500</option>
+          <option>$1,500 – $5,000</option>
+          <option>$5,000+</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <div class="inquiry-field">
+        <label for="inq-timeline">Timeline</label>
+        <select id="inq-timeline">
+          <option value="">Select a timeline</option>
+          <option>ASAP</option>
+          <option>Within 2 weeks</option>
+          <option>Within a month</option>
+          <option>Flexible / not urgent</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="inquiry-field inquiry-field-full">
+      <label for="inq-description">Project Description *</label>
+      <textarea id="inq-description" rows="4" required placeholder="Tell us what you need help with..."></textarea>
+    </div>
+
+    <div class="inquiry-submit-row">
+      <button type="submit" class="btn-cta" id="inquirySendWhatsapp">
+        <i class="fab fa-whatsapp"></i> Send via WhatsApp
+      </button>
+      <button type="submit" class="learn-btn" id="inquirySendEmail">
+        <i class="fas fa-envelope"></i> Send via Email
+      </button>
+    </div>
+    <p class="inquiry-privacy-note">* Required fields. Submitting opens WhatsApp or your email app with your details pre-filled — nothing is stored on this site.</p>
+  </form>
+</section>
+
 <footer>
 
 <div class="footer-nav">
