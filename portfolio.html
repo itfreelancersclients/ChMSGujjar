@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +43,7 @@
       <a href="about.html">About</a>
     </div>
     <div class="header-actions">
-      <a href="payment.html" class="pay-btn">💳 Pay</a>
+      <a href="payment.html" class="pay-btn"><i class="fas fa-credit-card"></i> Pay</a>
     </div>
   </nav>
   <button class="nav-toggle" id="navToggle" aria-label="Open menu">☰</button>
@@ -51,7 +53,7 @@
     <a href="video.html">Video</a>
     <a href="portfolio.html" class="active">Portfolio</a>
     <a href="about.html">About</a>
-    <a href="payment.html">💳 Pay</a>
+    <a href="payment.html"><i class="fas fa-credit-card"></i> Pay</a>
     <a href="https://wa.me/923483679122?text=Hi,%20I%20want%20to%20know%20more%20about%20IFC%20services." class="mobile-cta">Chat on WhatsApp →</a>
   </div>
 </header>
@@ -63,46 +65,84 @@
 
 <section class="services-grid portfolio-grid">
 
-  <a href="thumbnails.html" class="service-card">
-    <i class="fab fa-youtube service-icon"></i>
-    <h3>YouTube Thumbnails</h3>
-    <p>View Portfolio</p>
+  <!-- Each item below: replace the placeholder <i> icon block with
+       <img src="your-thumbnail.jpg" alt="..."> inside .portfolio-thumb to show real work. -->
+
+  <a href="thumbnails.html" class="portfolio-item">
+    <div class="portfolio-thumb">
+      <i class="fab fa-youtube portfolio-placeholder-icon"></i>
+      <div class="portfolio-thumb-overlay"><span class="portfolio-view-btn">View Portfolio <i class="fas fa-arrow-right"></i></span></div>
+    </div>
+    <div class="portfolio-body">
+      <span class="portfolio-tag">Video</span>
+      <h3>YouTube Thumbnails</h3>
+    </div>
   </a>
 
-  <a href="logos.html" class="service-card">
-    <i class="fas fa-palette service-icon"></i>
-    <h3>Logo Design</h3>
-    <p>View Portfolio</p>
+  <a href="logos.html" class="portfolio-item">
+    <div class="portfolio-thumb">
+      <i class="fas fa-palette portfolio-placeholder-icon"></i>
+      <div class="portfolio-thumb-overlay"><span class="portfolio-view-btn">View Portfolio <i class="fas fa-arrow-right"></i></span></div>
+    </div>
+    <div class="portfolio-body">
+      <span class="portfolio-tag">Branding</span>
+      <h3>Logo Design</h3>
+    </div>
   </a>
 
-  <a href="social-posts.html" class="service-card">
-    <i class="fas fa-share-alt service-icon"></i>
-    <h3>Social Media Posts</h3>
-    <p>View Portfolio</p>
+  <a href="social-posts.html" class="portfolio-item">
+    <div class="portfolio-thumb">
+      <i class="fas fa-share-alt portfolio-placeholder-icon"></i>
+      <div class="portfolio-thumb-overlay"><span class="portfolio-view-btn">View Portfolio <i class="fas fa-arrow-right"></i></span></div>
+    </div>
+    <div class="portfolio-body">
+      <span class="portfolio-tag">Social</span>
+      <h3>Social Media Posts</h3>
+    </div>
   </a>
 
-  <a href="posters.html" class="service-card">
-    <i class="fas fa-image service-icon"></i>
-    <h3>Posters & Flyers</h3>
-    <p>View Portfolio</p>
+  <a href="posters.html" class="portfolio-item">
+    <div class="portfolio-thumb">
+      <i class="fas fa-image portfolio-placeholder-icon"></i>
+      <div class="portfolio-thumb-overlay"><span class="portfolio-view-btn">View Portfolio <i class="fas fa-arrow-right"></i></span></div>
+    </div>
+    <div class="portfolio-body">
+      <span class="portfolio-tag">Print</span>
+      <h3>Posters & Flyers</h3>
+    </div>
   </a>
 
-  <a href="business-cards.html" class="service-card">
-    <i class="fas fa-id-card service-icon"></i>
-    <h3>Business Cards</h3>
-    <p>View Portfolio</p>
+  <a href="business-cards.html" class="portfolio-item">
+    <div class="portfolio-thumb">
+      <i class="fas fa-id-card portfolio-placeholder-icon"></i>
+      <div class="portfolio-thumb-overlay"><span class="portfolio-view-btn">View Portfolio <i class="fas fa-arrow-right"></i></span></div>
+    </div>
+    <div class="portfolio-body">
+      <span class="portfolio-tag">Print</span>
+      <h3>Business Cards</h3>
+    </div>
   </a>
 
-  <a href="packaging.html" class="service-card">
-    <i class="fas fa-box-open service-icon"></i>
-    <h3>Packaging Design</h3>
-    <p>View Portfolio</p>
+  <a href="packaging.html" class="portfolio-item">
+    <div class="portfolio-thumb">
+      <i class="fas fa-box-open portfolio-placeholder-icon"></i>
+      <div class="portfolio-thumb-overlay"><span class="portfolio-view-btn">View Portfolio <i class="fas fa-arrow-right"></i></span></div>
+    </div>
+    <div class="portfolio-body">
+      <span class="portfolio-tag">Packaging</span>
+      <h3>Packaging Design</h3>
+    </div>
   </a>
 
-  <a href="website-ui.html" class="service-card">
-    <i class="fas fa-laptop-code service-icon"></i>
-    <h3>Website UI Design</h3>
-    <p>View Portfolio</p>
+  <a href="website-ui.html" class="portfolio-item">
+    <div class="portfolio-thumb">
+      <i class="fas fa-laptop-code portfolio-placeholder-icon"></i>
+      <div class="portfolio-thumb-overlay"><span class="portfolio-view-btn">View Portfolio <i class="fas fa-arrow-right"></i></span></div>
+    </div>
+    <div class="portfolio-body">
+      <span class="portfolio-tag">Web</span>
+      <h3>Website UI Design</h3>
+    </div>
   </a>
 
 </section>
@@ -123,7 +163,7 @@
 </div>
 <p>© 2026 IT Freelancers Clients. All Rights Reserved.</p>
 
-<a href="privacy.html">Privacy Policy</a> |
+<a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms &amp; Conditions</a> |
 <a href="contact.html">Contact</a>
 </footer>
 

@@ -15,6 +15,50 @@ window.addEventListener('load', function () {
 document.addEventListener("DOMContentLoaded", function () {
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ---- Cookie consent banner (gates Google Analytics) ---- */
+  const GA_ID = 'G-4Z82MSOWBN';
+  const CONSENT_KEY = 'ifc_cookie_consent';
+
+  function startAnalytics() {
+    if (typeof gtag === 'function') {
+      gtag('config', GA_ID);
+    }
+  }
+
+  const existingConsent = localStorage.getItem(CONSENT_KEY);
+  if (existingConsent === 'granted') {
+    startAnalytics();
+  } else if (existingConsent !== 'declined') {
+    // No choice made yet — show the banner
+    const styleLink = document.querySelector('link[href*="style.css"]');
+    const isSubfolder = styleLink && styleLink.getAttribute('href').startsWith('../');
+    const privacyHref = isSubfolder ? '../privacy.html' : 'privacy.html';
+
+    const banner = document.createElement('div');
+    banner.className = 'cookie-banner';
+    banner.innerHTML =
+      '<p>We use cookies for basic site analytics to understand what content is useful. ' +
+      'No personal data is sold or shared. <a href="' + privacyHref + '">Learn more</a></p>' +
+      '<div class="cookie-banner-actions">' +
+      '<button type="button" class="cookie-decline">Decline</button>' +
+      '<button type="button" class="cookie-accept">Accept</button>' +
+      '</div>';
+    document.body.appendChild(banner);
+    requestAnimationFrame(function () { banner.classList.add('show'); });
+
+    banner.querySelector('.cookie-accept').addEventListener('click', function () {
+      localStorage.setItem(CONSENT_KEY, 'granted');
+      startAnalytics();
+      banner.classList.remove('show');
+      setTimeout(function () { banner.remove(); }, 400);
+    });
+    banner.querySelector('.cookie-decline').addEventListener('click', function () {
+      localStorage.setItem(CONSENT_KEY, 'declined');
+      banner.classList.remove('show');
+      setTimeout(function () { banner.remove(); }, 400);
+    });
+  }
+
   /* ---- Scroll progress bar ---- */
   const progress = document.createElement('div');
   progress.className = 'scroll-progress';

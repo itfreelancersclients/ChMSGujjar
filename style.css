@@ -896,6 +896,37 @@ html.ifc-loaded body{opacity:1;transition:opacity .5s ease;}
 }
 .thumb-back a:hover, .logo-back a:hover, .webui-back a:hover{border-color:var(--gold);}
 
+/* ===================== COOKIE CONSENT BANNER ===================== */
+.cookie-banner{
+  position:fixed;left:20px;right:20px;bottom:-120px;z-index:500;
+  max-width:640px;margin:0 auto;
+  background:rgba(10,17,48,0.97);backdrop-filter:blur(14px);
+  border:1px solid var(--line);border-radius:16px;
+  padding:20px 22px;box-shadow:0 20px 50px rgba(0,0,0,0.5);
+  display:flex;flex-wrap:wrap;align-items:center;gap:16px;justify-content:space-between;
+  transition:bottom .5s cubic-bezier(.2,.7,.3,1);
+}
+.cookie-banner.show{bottom:20px;}
+.cookie-banner p{font-size:13.5px;color:var(--slate);margin:0;flex:1;min-width:220px;}
+.cookie-banner p a{color:var(--gold);text-decoration:underline;}
+.cookie-banner-actions{display:flex;gap:10px;flex-shrink:0;}
+.cookie-banner-actions button{
+  font-family:'IBM Plex Mono',monospace;font-size:12.5px;padding:9px 18px;
+  border-radius:999px;cursor:pointer;transition:.25s;
+}
+.cookie-decline{background:none;border:1px solid var(--line);color:var(--slate);}
+.cookie-decline:hover{border-color:var(--slate);color:var(--ivory);}
+.cookie-accept{
+  background:linear-gradient(120deg, var(--champagne), var(--gold));
+  border:none;color:var(--void-navy);font-weight:600;
+}
+.cookie-accept:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,162,39,0.3);}
+@media(max-width:560px){
+  .cookie-banner{left:12px;right:12px;padding:16px 18px;}
+  .cookie-banner-actions{width:100%;}
+  .cookie-banner-actions button{flex:1;}
+}
+
 /* ===================== FOOTER ===================== */
 footer{
   padding:60px 32px 30px;max-width:1240px;margin:0 auto;text-align:center;

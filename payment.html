@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,7 +44,7 @@
       <a href="about.html">About</a>
     </div>
     <div class="header-actions">
-      <a href="payment.html" class="pay-btn active">💳 Pay</a>
+      <a href="payment.html" class="pay-btn active"><i class="fas fa-credit-card"></i> Pay</a>
     </div>
   </nav>
   <button class="nav-toggle" id="navToggle" aria-label="Open menu">☰</button>
@@ -52,13 +54,13 @@
     <a href="video.html">Video</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="about.html">About</a>
-    <a href="payment.html" class="active">💳 Pay</a>
+    <a href="payment.html" class="active"><i class="fas fa-credit-card"></i> Pay</a>
     <a href="https://wa.me/923483679122?text=Hi,%20I%20want%20to%20know%20more%20about%20IFC%20services." class="mobile-cta">Chat on WhatsApp →</a>
   </div>
 </header>
 
 <section class="payment-hero">
-  <h1>💳 Payment Methods</h1>
+  <h1><i class="fas fa-credit-card"></i> Payment Methods</h1>
   <p>Secure ways to pay for your IFC project — choose whichever works best for you.</p>
 </section>
 
@@ -87,59 +89,38 @@ Pay with SadaPay
 
 </div>
 
-<div class="payment-card">
-
-<h2>Binance (USDT BEP20)</h2>
-
-<p><b>UID:</b>
-<span id="binanceuid">383882068</span>
-</p>
-
-<button class="copy-btn" onclick="copyText('binanceuid')">
-    Copy UID
-</button>
-
-<p><b>Network:</b> BEP20 (BSC)</p>
-
-
-<p><b>Exchange Address:</b></p>
-
-<p id="binance" class="wallet-address">
-0x51f1c6cf2dc34a5dd957b77bfbc307c31c856976
-</p>
-
-<button class="copy-btn"
-onclick="copyText('binance')">
-Copy Address
-</button>
-
 </div>
 
-<div class="payment-card">
+<!-- Crypto payment: kept as a secondary, collapsed option rather than
+     exposing wallet addresses on the main payment grid -->
+<div class="crypto-toggle-wrap">
+  <button class="crypto-toggle" id="cryptoToggle" aria-expanded="false" aria-controls="cryptoPanel">
+    <i class="fas fa-coins"></i> Prefer to pay with crypto? <span class="crypto-toggle-arrow">▾</span>
+  </button>
 
-<h2>OKX (USDT BEP20)</h2>
+  <div class="payment-container crypto-panel" id="cryptoPanel" hidden>
 
-<p><b>UID:</b>
-<span id="okxuid">437877614754071959</span>
-</p>
+    <div class="payment-card">
+      <h2>Binance (USDT BEP20)</h2>
+      <p><b>UID:</b> <span id="binanceuid">383882068</span></p>
+      <button class="copy-btn" onclick="copyText('binanceuid')">Copy UID</button>
+      <p><b>Network:</b> BEP20 (BSC)</p>
+      <p><b>Exchange Address:</b></p>
+      <p id="binance" class="wallet-address">0x51f1c6cf2dc34a5dd957b77bfbc307c31c856976</p>
+      <button class="copy-btn" onclick="copyText('binance')">Copy Address</button>
+    </div>
 
-<button class="copy-btn" onclick="copyText('okxuid')">
-    Copy UID
-</button>
+    <div class="payment-card">
+      <h2>OKX (USDT BEP20)</h2>
+      <p><b>UID:</b> <span id="okxuid">437877614754071959</span></p>
+      <button class="copy-btn" onclick="copyText('okxuid')">Copy UID</button>
+      <p><b>Network:</b> BEP20 (BSC)</p>
+      <p><b>Wallet Address:</b></p>
+      <p id="okx" class="wallet-address">0xdc61d47678c79b0d1b1c8b874d48210632da402...</p>
+      <button class="copy-btn" onclick="copyText('okx')">Copy Address</button>
+    </div>
 
-<p><b>Network:</b> BEP20 (BSC)</p>
-
-<p><b>Wallet Address:</b></p>
-
-<p id="okx" class="wallet-address">
-0xdc61d47678c79b0d1b1c8b874d48210632da402...
-</p>
-
-<button class="copy-btn"
-onclick="copyText('okx')">
-Copy Address
-</button>
-
+  </div>
 </div>
 
 <div class="payment-note">
@@ -149,8 +130,6 @@ Copy Address
 Only send USDT through the BEP20 (BSC) network.
 
 After payment, please send your Transaction ID (TXID) and Order ID through WhatsApp or Email for verification.
-
-</div>
 
 </div>
 
@@ -173,7 +152,7 @@ After payment, please send your Transaction ID (TXID) and Order ID through Whats
 
 <p>© 2026 IT Freelancers Clients. All Rights Reserved.</p>
 
-<a href="privacy.html">Privacy Policy</a> |
+<a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms &amp; Conditions</a> |
 <a href="contact.html">Contact</a>
 
 </footer>
@@ -183,6 +162,16 @@ function copyText(id){
 const text=document.getElementById(id).innerText.trim();
 navigator.clipboard.writeText(text);
 alert("Copied: " + text);
+}
+
+const cryptoToggle = document.getElementById('cryptoToggle');
+const cryptoPanel = document.getElementById('cryptoPanel');
+if (cryptoToggle && cryptoPanel) {
+  cryptoToggle.addEventListener('click', () => {
+    const isOpen = cryptoToggle.getAttribute('aria-expanded') === 'true';
+    cryptoToggle.setAttribute('aria-expanded', String(!isOpen));
+    cryptoPanel.hidden = isOpen;
+  });
 }
 </script>
 <script src="ifc-chatbot.js" defer></script>
