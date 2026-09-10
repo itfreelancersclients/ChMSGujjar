@@ -316,7 +316,7 @@ html.ifc-loaded body{opacity:1;transition:opacity .5s ease;}
   box-shadow:0 20px 50px rgba(6,11,31,0.5), 0 0 0 1px rgba(201,162,39,0.15);
 }
 .service-card:hover::before{opacity:1;}
-.service-icon{font-size:30px;margin-bottom:14px;}
+.service-icon{font-size:30px;margin-bottom:14px;color:var(--gold);}
 .service-card h3{font-size:19px;margin-bottom:10px;}
 .service-card p{font-size:14px;color:var(--slate);}
 
@@ -353,7 +353,7 @@ html.ifc-loaded body{opacity:1;transition:opacity .5s ease;}
   background:linear-gradient(160deg, rgba(201,162,39,0.09), rgba(14,22,64,0.7) 60%);
   box-shadow:0 20px 50px rgba(6,11,31,0.5), 0 0 0 1px rgba(201,162,39,0.15);
 }
-.why-ifc-icon{font-size:30px;}
+.why-ifc-icon{font-size:30px;color:var(--gold);}
 .why-ifc-card h3{font-size:16.5px;color:var(--ivory);line-height:1.4;}
 @media(max-width:560px){ .why-ifc-grid{grid-template-columns:1fr 1fr;gap:12px;} .why-ifc-card{padding:24px 16px;} }
 
