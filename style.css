@@ -558,6 +558,7 @@ html.ifc-loaded body{opacity:1;transition:opacity .5s ease;}
   font-family:'IBM Plex Mono',monospace;transition:.25s;
 }
 .service-chip:hover{border-color:var(--gold);color:var(--gold);}
+.about-additional-label{font-size:13.5px;color:var(--slate-dim);margin-top:16px;}
 
 .additional-services{max-width:900px;margin:52px auto 0;text-align:center;}
 .additional-title{
