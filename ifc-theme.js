@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---- Cookie consent banner (gates Google Analytics) ---- */
-  const GA_ID = 'G-4Z82MSOWBN';
+  const GA_ID = 'G-4Z82MS0WBN';
   const CONSENT_KEY = 'ifc_cookie_consent';
 
   function startAnalytics() {
